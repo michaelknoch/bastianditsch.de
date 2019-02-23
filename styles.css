@@ -7,8 +7,9 @@ body {
     display: flex;
     background-color: #f9f4f1;
     justify-content: center;
-
     font-family: Bebas Neue;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
