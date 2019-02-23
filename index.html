@@ -12,42 +12,97 @@
     </head>
 
     <body>
-        <div class="header">
-            <h1>bastianditsch.de</h1>
-            <h2>video editor</h2>
-        </div>
+        <div class="container">
+            <div class="header">
+                <div>
+                    <img
+                        src="https://media.giphy.com/media/L8AdWkDNN8tO0/giphy.gif"
+                        alt="funny gif"
+                    />
+                    <h1>bastianditsch.de</h1>
+                </div>
+                <a class="scroll-to-content"><h2>video editor</h2></a>
+            </div>
 
-        <div class="videobox">
-            <iframe
-                width="640"
-                height="564"
-                src="https://player.vimeo.com/video/298738020"
-                frameborder="0"
-                allowfullscreen
-                mozallowfullscreen
-                webkitAllowFullScreen
-            ></iframe>
-            <h3>MTV Raps // Monkey Pictures</h3>
-        </div>
+            <div class="video-grid">
+                <div class="videobox">
+                    <iframe
+                        width="100%"
+                        height="315"
+                        src="https://player.vimeo.com/video/298738020"
+                        frameborder="0"
+                        allowfullscreen
+                        mozallowfullscreen
+                        webkitAllowFullScreen
+                    ></iframe>
+                    <h3>MTV Raps | Monkey Pictures</h3>
+                </div>
 
-        <div class="videobox">
-            <iframe
-                width="640"
-                height="564"
-                src="https://player.vimeo.com/video/298737242"
-                frameborder="0"
-                allowfullscreen
-                mozallowfullscreen
-                webkitAllowFullScreen
-            ></iframe>
-             <h3>MTV Brand // Monkey Pictures</h3>
-        </div>
+                <div class="videobox">
+                    <iframe
+                        width="100%"
+                        height="315"
+                        src="https://player.vimeo.com/video/298737242"
+                        frameborder="0"
+                        allowfullscreen
+                        mozallowfullscreen
+                        webkitAllowFullScreen
+                    ></iframe>
+                    <h3>MTV Brand | Monkey Pictures</h3>
+                </div>
 
-        <div class="videobox">
+                <div class="videobox">
+                    <iframe
+                        width="100%"
+                        height="315"
+                        src="https://player.vimeo.com/video/298173207"
+                        frameborder="0"
+                        allowfullscreen
+                        mozallowfullscreen
+                        webkitAllowFullScreen
+                    ></iframe>
+                    <h3>Comedy Central brand | Monkey Pictures</h3>
+                </div>
+
+                <div class="videobox">
+                    <iframe
+                        width="100%"
+                        height="315"
+                        src="https://player.vimeo.com/video/157605820"
+                        frameborder="0"
+                        allowfullscreen
+                        mozallowfullscreen
+                        webkitAllowFullScreen
+                    ></iframe>
+
+                    <h3>Spiegel TV pitch | Monkey Pictures</h3>
+                </div>
+            </div>
+
             <div class="footer">
-                <span>kontakt@bastianditsch.de</span>
-                <span>+49 17661919116</span>
+                <h5>Cutting edge</h5>
+                <div class="contact">
+                    <span>+49 17661919116</span>
+                    <span>
+                        <a href="mailto:kontakt@bastianditsch.de">
+                            kontakt@bastianditsch.de
+                        </a>
+                    </span>
+                </div>
+                <img
+                    class="footer-img"
+                    src="https://media.giphy.com/media/64agTijLAGgifRbF9r/source.gif"
+                />
             </div>
         </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            $("a.scroll-to-content").click(function() {
+                $("html,body").animate(
+                    { scrollTop: $(".video-grid").offset().top },
+                    "fast"
+                );
+            });
+        </script>
     </body>
 </html>
