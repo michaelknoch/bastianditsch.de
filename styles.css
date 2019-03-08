@@ -12,6 +12,20 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.grain {
+    position: fixed;
+    height: 300%;
+    width: 300%;
+    top: -150%;
+    opacity: 1;
+
+    background-image: url("http://willmayer.com/wp-content/themes/will_mayer/assets/images/grain-888ad7615a.png");
+    animation: grain 1s steps(4) infinite;
+    -webkit-animation: grain 1s steps(4) infinite;
+
+    z-index: -1;
+}
+
 .container {
     flex: 1;
     max-width: 1200px;
@@ -63,7 +77,7 @@ img {
     height: 100vh;
 }
 
-a.scroll-to-content {
+a#scroll-to-content {
     cursor: pointer;
 }
 
@@ -86,6 +100,7 @@ a.scroll-to-content {
 
 .videobox iframe {
     width: 100%;
+    background: red;
 }
 
 .footer {
@@ -120,6 +135,17 @@ a.scroll-to-content {
     color: #bcc5cf;
 }
 
+.show-when-in-viewport {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: 0.6s ease-out;
+}
+
+.show-when-in-viewport.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media (max-width: 767px) {
     .video-grid {
         grid-template-columns: 1fr;
@@ -130,5 +156,39 @@ a.scroll-to-content {
     }
     .contact {
         flex-direction: column;
+    }
+}
+
+@keyframes grain {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(-5%, -10%);
+    }
+    20% {
+        transform: translate(-15%, 5%);
+    }
+    30% {
+        transform: translate(7%, -25%);
+    }
+    40% {
+        transform: translate(-5%, 25%);
+    }
+    50% {
+        transform: translate(-15%, 10%);
+    }
+    60% {
+        transform: translate(15%, 0%);
+    }
+    70% {
+        transform: translate(0%, 15%);
+    }
+    80% {
+        transform: translate(3%, 35%);
+    }
+    90% {
+        transform: translate(-10%, 10%);
     }
 }
