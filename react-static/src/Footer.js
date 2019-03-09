@@ -25,31 +25,31 @@ const styles = {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
     },
 
     img: {
-        maxWidth: "390px"
+        maxWidth: "390px",
     },
 
     contact: {
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
     },
 
     link: {
         color: "#bcc5cf",
-        textDecoration: "none"
+        textDecoration: "none",
     },
 
     span: {
         padding: "10px",
         fontSize: "25px",
         fontWeight: "100",
-        color: "#bcc5cf"
-    }
+        color: "#bcc5cf",
+    },
 };
 
 export default Footer;

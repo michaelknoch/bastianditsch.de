@@ -13,7 +13,7 @@ const Header = () => (
             style={{
                 jusitfyContent: "stretch",
                 alignSelf: "flex-start",
-                display: "flex"
+                display: "flex",
             }}
         >
             <div style={{ flexDirection: "row", paddingBottom: "50px" }}>
@@ -37,8 +37,8 @@ const styles = {
         alignItems: "center",
         justifyContent: "flex-end",
         height: "100vh",
-        padding: "0 20px"
-    }
+        padding: "0 20px",
+    },
 };
 
 export default Header;

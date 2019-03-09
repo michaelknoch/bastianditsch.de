@@ -33,7 +33,7 @@ const styles = {
     grid: {
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
-        padding: "100px 0"
+        padding: "100px 0",
     },
     element: {
         display: "flex",
@@ -42,8 +42,8 @@ const styles = {
         alignItems: "center",
         padding: "20px",
         height: "420px",
-        paddingBottom: "20px"
-    }
+        paddingBottom: "20px",
+    },
 };
 
 export default TopicGrid;
