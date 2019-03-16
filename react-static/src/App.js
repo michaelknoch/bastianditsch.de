@@ -59,7 +59,7 @@ addVisibleClassToVisibleElements();
 
 // https://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
 function isElementInViewport(el) {
-    let top = el.offsetTop + 300;
+    let top = el.offsetTop + 350;
     let left = el.offsetLeft;
     const width = el.offsetWidth;
     const height = el.offsetHeight;

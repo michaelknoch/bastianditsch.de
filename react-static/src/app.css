@@ -69,6 +69,10 @@ h3 {
     width: 100%;
 }
 
+.container-fluid {
+    width: 100%;
+}
+
 .show-when-in-viewport {
     opacity: 0;
     transform: translateY(-40px);

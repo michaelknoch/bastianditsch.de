@@ -3,7 +3,7 @@ import React from "react";
 import saul from "./gif/saul.gif";
 
 const Footer = () => (
-    <div style={styles.footer} className="container">
+    <div style={styles.footer} className="container-fluid footer">
         <div style={styles.contact} className="show-when-in-viewport">
             <img style={styles.img} src={saul} alt="funny contact me gif" />
             <span style={styles.span}>+49 17661919116</span>
@@ -19,7 +19,7 @@ const Footer = () => (
 const styles = {
     footer: {
         paddingTop: "940px",
-        marginBottom: "200px",
+        paddingBottom: "200px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -27,26 +27,27 @@ const styles = {
     },
 
     img: {
-        maxWidth: "390px",
+        maxWidth: "580px",
+        paddingBottom: "50px",
     },
 
     contact: {
         display: "flex",
-        flexDirection: "row",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
     },
 
     link: {
-        color: "#bcc5cf",
+        color: "black",
         textDecoration: "none",
     },
 
     span: {
-        padding: "10px",
+        padding: "0px 10px",
         fontSize: "25px",
         fontWeight: "100",
-        color: "#bcc5cf",
+        color: "black",
     },
 };
 
