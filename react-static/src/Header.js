@@ -1,12 +1,17 @@
 import React from "react";
 
+import simpsons from "./gif/simpsons.gif";
+
 const Header = () => (
-    <div style={styles.header}>
-        <div style={{ display: "flex", flex: 1, alignItems: "center" }}>
-            <img
-                src="https://media.giphy.com/media/L8AdWkDNN8tO0/giphy.gif"
-                alt="funny gif"
-            />
+    <div style={styles.header} className="container">
+        <div
+            style={{
+                display: "flex",
+                flex: 1,
+                alignItems: "center",
+            }}
+        >
+            <img src={simpsons} alt="funny gif" style={{ maxWidth: 700 }} />
         </div>
 
         <div

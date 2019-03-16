@@ -1,15 +1,30 @@
-@font-face {
-    font-family: "Bebas Neue";
-    src: url("font.ttf");
-}
+@import url("https://fonts.googleapis.com/css?family=Chivo");
+@import url("https://fonts.googleapis.com/css?family=Overpass");
 
 body {
     display: flex;
     background-color: #f9f4f1;
     justify-content: center;
-    font-family: Bebas Neue;
+    font-family: Overpass;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Chivo;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
 }
 
 h1 {
@@ -45,22 +60,13 @@ h3 {
     display: flex;
     justify-content: center;
     width: 100%;
+    overflow: hidden;
+    padding: 0;
 }
 
 .container {
-    flex: 1;
     max-width: 1200px;
-}
-
-h5 {
-    font-size: 20px;
-    color: #041c28;
-    margin-bottom: 18px;
-}
-
-img {
     width: 100%;
-    height: auto;
 }
 
 .show-when-in-viewport {

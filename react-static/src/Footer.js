@@ -1,9 +1,11 @@
 import React from "react";
 
+import saul from "./gif/saul.gif";
+
 const Footer = () => (
-    <div style={styles.footer}>
-        <h5>Cutting edge</h5>
-        <div style={styles.contact}>
+    <div style={styles.footer} className="container">
+        <div style={styles.contact} className="show-when-in-viewport">
+            <img style={styles.img} src={saul} alt="funny contact me gif" />
             <span style={styles.span}>+49 17661919116</span>
             <span style={styles.span}>
                 <a style={styles.link} href="mailto:kontakt@bastianditsch.de">
@@ -11,16 +13,12 @@ const Footer = () => (
                 </a>
             </span>
         </div>
-        <img
-            style={styles.img}
-            src="https://media.giphy.com/media/64agTijLAGgifRbF9r/source.gif"
-        />
     </div>
 );
 
 const styles = {
     footer: {
-        marginTop: "200px",
+        paddingTop: "940px",
         marginBottom: "200px",
         display: "flex",
         flexDirection: "column",

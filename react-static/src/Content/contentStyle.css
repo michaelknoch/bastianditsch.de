@@ -1,0 +1,52 @@
+.content h3 {
+    position: relative;
+}
+
+.content h3:after {
+    content: "";
+    border-bottom: 2px solid white;
+    width: 500px;
+    position: absolute;
+    right: 0;
+    bottom: -7px;
+}
+
+.content .element {
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.content .element .mouseover {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-out;
+}
+
+.content .element .mouseover:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.content .element .text {
+    flex: 1;
+    color: white;
+    padding: 15px;
+    text-align: right;
+}
+
+.content .element:nth-child(even) .mouseover {
+    flex-direction: row-reverse;
+}
+
+.content .element:nth-child(even) .text {
+    text-align: left;
+}
+
+.content .element:nth-child(even) h3:after {
+    left: 0;
+}
