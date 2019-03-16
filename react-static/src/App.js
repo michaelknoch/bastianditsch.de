@@ -8,12 +8,15 @@ import Footer from "./Footer";
 function App() {
     const [scrollYOffset, setScrollYOffset] = useState(0);
 
+    useEffect(() => {
+        addVisibleClassToVisibleElements(window.scrollY / 5);
+    }, []);
+
     const onScroll = () => {
         setScrollYOffset(window.scrollY);
+
         window.requestAnimationFrame(() => {
-            setTimeout(() => {
-                addVisibleClassToVisibleElements();
-            }, 500);
+            addVisibleClassToVisibleElements(window.scrollY / 5);
         });
     };
 
@@ -43,23 +46,26 @@ function App() {
     );
 }
 
-function addVisibleClassToVisibleElements() {
+function addVisibleClassToVisibleElements(yOffset) {
     const elements = document.querySelectorAll(
         ".show-when-in-viewport:not(.visible)"
     );
 
     elements.forEach(el => {
-        if (isElementInViewport(el)) {
-            el.classList.add("visible");
+        console.log(yOffset);
+        if (isElementInViewport(el, yOffset)) {
+            setTimeout(() => {
+                el.classList.add("visible");
+            }, 500);
         }
     });
 }
 
-addVisibleClassToVisibleElements();
+// addVisibleClassToVisibleElements();
 
 // https://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-function isElementInViewport(el) {
-    let top = el.offsetTop + 350;
+function isElementInViewport(el, yOffset) {
+    let top = el.offsetTop + yOffset - 200;
     let left = el.offsetLeft;
     const width = el.offsetWidth;
     const height = el.offsetHeight;
