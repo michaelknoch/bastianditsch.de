@@ -1,0 +1,61 @@
+.overlay-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.8);
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    transition-duration: 0.3s;
+    transition-duration: ease-in;
+}
+
+.overlay {
+    border-top: 5px solid grey;
+    border-bottom: 5px solid grey;
+
+    background-color: orange;
+    height: 60vh;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+
+    display: flex;
+    overflow-x: scroll;
+
+    padding-left: 20vw;
+}
+
+.overlay::-webkit-scrollbar {
+    display: none;
+}
+
+.video {
+    position: relative;
+    margin: 10px;
+
+    min-width: 60vw;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.video:last-child {
+    padding-right: 20vw;
+}
+
+.video::before {
+    content: "";
+    position: absolute;
+    left: calc(-20vw - 7px);
+    scroll-snap-align: start;
+}

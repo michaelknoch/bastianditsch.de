@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import "./app.css";
 import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
+
+import Overlay from "./Overlay";
 
 function App() {
     const [scrollYOffset, setScrollYOffset] = useState(0);
@@ -25,23 +27,41 @@ function App() {
         return () => window.removeListener("scroll", onScroll);
     }, []);
 
+    const [visibleModal, setVisibleModal] = useState(null);
+    console.log(scrollYOffset);
     return (
         <div
             style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
                 width: "100%",
+
+                // currently breaks scroll listener
+                // height: "100vh",
+                // overflow: visibleModal ? "hidden" : "scroll"
             }}
         >
-            <Header />
-            <Content
-                scrollYOffset={scrollYOffset}
+            <div
                 style={{
-                    transform: `translate3d(0, ${scrollYOffset / 5}px, 0)`,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    width: "100%",
                 }}
-            />
-            <Footer />
+            >
+                <Header />
+                <Content
+                    setVisibleModal={setVisibleModal}
+                    scrollYOffset={scrollYOffset}
+                    style={{
+                        transform: `translate3d(0, ${scrollYOffset / 5}px, 0)`,
+                    }}
+                />
+                <Footer />
+
+                <Overlay
+                    setVisibleModal={setVisibleModal}
+                    visible={visibleModal === "tv"}
+                />
+            </div>
         </div>
     );
 }
@@ -65,7 +85,7 @@ function addVisibleClassToVisibleElements(yOffset) {
 
 // https://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
 function isElementInViewport(el, yOffset) {
-    let top = el.offsetTop + yOffset - 200;
+    let top = el.offsetTop + yOffset - 100;
     let left = el.offsetLeft;
     const width = el.offsetWidth;
     const height = el.offsetHeight;
