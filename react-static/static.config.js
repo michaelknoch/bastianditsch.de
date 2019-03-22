@@ -1,5 +1,5 @@
 export default {
     getSiteData: () => ({
-        title: "React Static"
-    })
+        title: "React Static",
+    }),
 };
