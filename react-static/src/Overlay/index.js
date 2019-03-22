@@ -5,11 +5,7 @@ import "./overlay.css";
 
 const Overlay = ({ visible, setVisibleModal }) => (
     <div
-        className="overlay-wrapper"
-        style={{
-            opacity: visible ? 1 : 0,
-            visibility: visible ? "visible" : "hidden",
-        }}
+        className={"overlay-wrapper " + (visible ? "visible" : "hidden")}
         onClick={() => {
             setVisibleModal(null);
         }}

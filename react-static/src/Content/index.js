@@ -28,7 +28,10 @@ const data = [
 ];
 
 const Content = ({ style, scrollYOffset, setVisibleModal }) => (
-    <div className="noise" style={{ ...styles.noise, ...style }}>
+    <div
+        className="noise content-wrapper"
+        style={{ ...styles.noise, ...style }}
+    >
         <div className="content container">
             {data.map(({ img, headline, subtitle, key }) => (
                 <div className="element show-when-in-viewport">
@@ -50,7 +53,7 @@ const Content = ({ style, scrollYOffset, setVisibleModal }) => (
                             className="text"
                             style={{
                                 transform: `translate3d(0, ${scrollYOffset /
-                                    20}px, 0)`,
+                                    18}px, 0)`,
                             }}
                         >
                             <h3>{headline}</h3>

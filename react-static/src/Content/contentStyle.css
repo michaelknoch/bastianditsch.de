@@ -19,6 +19,11 @@
     padding: 20px;
 }
 
+.content-wrapper {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
 .content .element .mouseover {
     display: flex;
     flex-direction: row;

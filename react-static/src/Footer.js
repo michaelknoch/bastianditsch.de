@@ -21,13 +21,12 @@ const Footer = ({ style }) => (
 
 const styles = {
     footer: {
-        paddingTop: "740px",
-        paddingBottom: "200px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         zIndex: 1000,
+        minHeight: "80vh",
     },
 
     img: {

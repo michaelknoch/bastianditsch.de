@@ -13,14 +13,20 @@
     align-items: center;
 
     transition-duration: 0.3s;
+    transition-delay: 0.1s;
     transition-duration: ease-in;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.overlay-wrapper.visible {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0;
 }
 
 .overlay {
-    border-top: 5px solid grey;
-    border-bottom: 5px solid grey;
-
-    background-color: orange;
     height: 60vh;
 
     overflow-x: scroll;

@@ -2,8 +2,8 @@ import React from "react";
 
 import simpsons from "./gif/simpsons.gif";
 
-const Header = () => (
-    <div style={styles.header} className="container">
+const Header = ({ style }) => (
+    <div style={{ ...styles.header, ...style }} className="container">
         <div
             style={{
                 display: "flex",
