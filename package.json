@@ -1,14 +1,25 @@
 {
   "name": "bastianditsch.de",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-static start",
+    "stage": "react-static build --staging",
+    "build": "react-static build",
+    "bundle": "react-static bundle",
+    "export": "react-static export",
+    "deploy": "npm run build && now ./dist -A ../now.json",
+    "serve": "serve dist -p 3000 -s"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "prettier": "^1.16.4"
+    "http-server": "^0.11.1",
+    "prettier": "^1.16.4",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-hot-loader": "^4.3.12",
+    "react-static": "^6.0.18"
+  },
+  "devDependencies": {
+    "eslint-config-react-tools": "1.x.x",
+    "serve": "10.1.1"
   }
 }
