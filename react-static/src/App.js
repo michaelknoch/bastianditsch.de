@@ -7,6 +7,76 @@ import Footer from "./Footer";
 
 import Overlay from "./Overlay";
 
+const data = {
+    tv: [
+        {
+            videoId: "157603204",
+            title: "PARAMOUNT channel",
+            description: "Trailer for paramount channel poland",
+            company: "MONKEY Pictures",
+        },
+        {
+            videoId: "157904332",
+            title: "NICKNIGHT skins",
+            description: "Trailer for the series skins on nicknight germany",
+            company: "MONKEY Pictures",
+        },
+        {
+            videoId: "322428240",
+            title: "NICK sofakino",
+            description: "sofakino trailer for nick germany",
+            company: "PIXEL JUNGLE",
+        },
+        {
+            videoId: "322429346",
+            title: "SUPER RTL trophy wife",
+            description: "Trailer for the series trophy wife for super rtl",
+            company: "MONKEY Pictures",
+        },
+    ],
+    brand: [
+        {
+            videoId: "298737242",
+            title: "MTV brand",
+            description: "Brand trailer for mtv",
+            company: "PIXEL JUNGLE",
+        },
+        {
+            videoId: "298738020",
+            title: "MTV Yo! MTV Raps",
+            description: "Brand trailer for mtv / yo! mtv raps",
+            company: "PIXEL JUNGLE",
+        },
+        {
+            videoId: "298173207",
+            title: "COMEDY CENTRAL brand",
+            description: "Brand trailer for comedy central",
+            company: "MONKEY Pictures",
+        },
+        {
+            videoId: "298174468",
+            title: "COMEDY CENTRAL intro",
+            description: "Brand trailer for comedy central / cc intro",
+            company: "MONKEY Pictures",
+        },
+    ],
+    other: [
+        {
+            videoId: "322430285",
+            title: "MONKEY Pictures reel",
+            description: "Highlight reel for monkey pictures",
+            company: "MONKEY Pictures",
+        },
+        {
+            videoId: "157605820",
+            title: "SPIEGEL TV geschichte",
+            description:
+                "Brand trailer for spiegel tv geschichte / spiegel tv pitch",
+            company: "MONKEY Pictures",
+        },
+    ],
+};
+
 function App() {
     const [scrollYOffset, setScrollYOffset] = useState(0);
 
@@ -33,10 +103,9 @@ function App() {
         <div
             style={{
                 width: "100%",
-
                 // currently breaks scroll listener
                 // height: "100vh",
-                // overflow: visibleModal ? "hidden" : "scroll"
+                // overflow: visibleModal ? "hidden" : "scroll",
             }}
         >
             <div
@@ -53,15 +122,28 @@ function App() {
                     }}
                 />
                 <Content
+                    visibleModal={visibleModal}
                     setVisibleModal={setVisibleModal}
                     scrollYOffset={scrollYOffset}
-                    style={{ transform: `scale(${visibleModal ? 1.5 : 1})` }}
                 />
                 <Footer />
 
                 <Overlay
-                    setVisibleModal={setVisibleModal}
                     visible={visibleModal === "tv"}
+                    data={data.tv}
+                    hideModal={() => setVisibleModal(null)}
+                />
+
+                <Overlay
+                    visible={visibleModal === "brand"}
+                    data={data.brand}
+                    hideModal={() => setVisibleModal(null)}
+                />
+
+                <Overlay
+                    visible={visibleModal === "other"}
+                    data={data.other}
+                    hideModal={() => setVisibleModal(null)}
                 />
             </div>
         </div>
@@ -74,7 +156,6 @@ function addVisibleClassToVisibleElements(yOffset = 0) {
     );
 
     elements.forEach(el => {
-        console.log(yOffset);
         if (isElementInViewport(el, yOffset)) {
             setTimeout(() => {
                 el.classList.add("visible");
@@ -84,7 +165,7 @@ function addVisibleClassToVisibleElements(yOffset = 0) {
 }
 
 // https://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-function isElementInViewport(el, yOffset) {
+export function isElementInViewport(el, yOffset) {
     let top = el.offsetTop + yOffset;
     let left = el.offsetLeft;
     const width = el.offsetWidth;

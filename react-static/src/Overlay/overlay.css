@@ -6,9 +6,8 @@
     bottom: 0;
 
     background-color: rgba(0, 0, 0, 0.8);
-
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -20,6 +19,39 @@
     visibility: hidden;
 }
 
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.title-wrapper {
+    margin-top: 50px;
+    background-color: #101010;
+    padding: 10px;
+    max-width: 1200px;
+}
+
+.title-wrapper span {
+    color: white;
+    cursor: pointer;
+    padding: 5px 0;
+    padding-right: 20px;
+    text-transform: uppercase;
+}
+
+.title-wrapper span.active {
+    color: orange;
+}
+
+.scrollview-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
 .overlay-wrapper.visible {
     opacity: 1;
     visibility: visible;
@@ -29,6 +61,7 @@
 .overlay {
     height: 60vh;
 
+    scroll-behavior: smooth;
     overflow-x: scroll;
     overflow-y: hidden;
 
@@ -36,7 +69,6 @@
 
     display: flex;
     overflow-x: scroll;
-
     padding-left: 20vw;
 }
 
@@ -57,6 +89,51 @@
 
 .video:last-child {
     padding-right: 20vw;
+}
+
+.video-image-overlay {
+    position: absolute;
+    left: 41px;
+    right: 41px;
+    top: 0;
+    bottom: 0;
+
+    transition-duration: 0.4s;
+    transition-delay: 0.3s;
+    transition-timing-function: ease-out;
+
+    display: flex;
+    justify-content: center;
+}
+
+.video-image-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.video .play-button {
+    width: 70px;
+    cursor: pointer;
+    padding: 15px;
+    align-self: center;
+    background-color: #101010;
+}
+
+img.close-button {
+    width: 30px;
+    float: right;
+    margin-bottom: 30px;
+    margin-right: 100px;
+    cursor: pointer;
+
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+
+    padding: 20px;
+}
+
+img.close-button:hover {
+    transform: scale(1.4);
 }
 
 .video::before {

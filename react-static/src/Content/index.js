@@ -10,8 +10,8 @@ const data = [
     {
         key: "tv",
         img: mtv,
-        headline: "BRAND TRAILERS",
-        subtitle: "Viacom, MTV, Comedy Central",
+        headline: "TV PROMOTION",
+        subtitle: "paramount, Nick, SUPER RTL",
     },
     {
         key: "brand",
@@ -20,18 +20,15 @@ const data = [
         subtitle: "Viacom, MTV, Comedy Central",
     },
     {
-        key: "random",
+        key: "brand",
         img: reel,
-        headline: "BRAND TRAILERS",
-        subtitle: "Viacom, MTV, Comedy Central",
+        headline: "OTHER",
+        subtitle: "SPIEGEL TV, MONKEY Pictures",
     },
 ];
 
-const Content = ({ style, scrollYOffset, setVisibleModal }) => (
-    <div
-        className="noise content-wrapper"
-        style={{ ...styles.noise, ...style }}
-    >
+const Content = ({ style, scrollYOffset, visibleModal, setVisibleModal }) => (
+    <div className={"content-wrapper " + (visibleModal ? "rotatescale" : "")}>
         <div className="content container">
             {data.map(({ img, headline, subtitle, key }) => (
                 <div className="element show-when-in-viewport">
@@ -65,16 +62,5 @@ const Content = ({ style, scrollYOffset, setVisibleModal }) => (
         </div>
     </div>
 );
-
-const styles = {
-    noise: {
-        // backgroundImage: `url(${noiseUrl})`,
-        backgroundColor: "black",
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-    },
-};
 
 export default Content;
