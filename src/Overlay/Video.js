@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import playButtonIcon from "./icons/play.svg";
+import playButtonIcon from "./icons/play.png";
 
 const Video = ({ src, title, previewImage, description, company }) => {
     const [showIframe, setShowIframe] = useState(!previewImage);

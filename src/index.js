@@ -4,7 +4,11 @@ import smoothscroll from "smoothscroll-polyfill";
 
 import App from "./App";
 
-smoothscroll.polyfill();
+// client only
+if (typeof window !== "undefined") {
+    smoothscroll.polyfill();
+}
+
 export default App;
 
 if (typeof document !== "undefined") {
