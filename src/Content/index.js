@@ -31,7 +31,7 @@ const Content = ({ style, scrollYOffset, visibleModal, setVisibleModal }) => (
     <div className={"content-wrapper " + (visibleModal ? "rotatescale" : "")}>
         <div className="content container">
             {data.map(({ img, headline, subtitle, key }) => (
-                <div className="element show-when-in-viewport">
+                <div key={key} className="element show-when-in-viewport">
                     <div
                         className="mouseover"
                         onClick={() => {

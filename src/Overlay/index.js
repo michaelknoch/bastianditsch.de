@@ -43,6 +43,7 @@ const Overlay = ({ visible, hideModal, data }) => {
                 >
                     {data.map(({ videoId, ...remainingData }) => (
                         <Video
+                            key={videoId}
                             src={`https://player.vimeo.com/video/${videoId}?title=0&byline=0&portrait=0&autoplay=1`}
                             previewImage={require(`./videoPreviewImages/${videoId}.jpg`)}
                             {...remainingData}
@@ -59,11 +60,15 @@ const Overlay = ({ visible, hideModal, data }) => {
             >
                 {data.map((d, i) => (
                     <span
+                        key={i}
                         onClick={() => {
-                            scrollViewRef.current.scrollTo(
-                                scrollViewRef.current.childNodes[i].offsetLeft,
-                                0
-                            );
+                            const left =
+                                scrollViewRef.current.childNodes[i].offsetLeft;
+                            scrollViewRef.current.scroll({
+                                top: 0,
+                                left,
+                                behavior: "smooth",
+                            });
                         }}
                         className={`title ${
                             i === visibleVideoIndex ? "active" : ""
