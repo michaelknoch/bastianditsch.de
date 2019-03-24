@@ -20,7 +20,7 @@ const data = [
         subtitle: "Viacom, MTV, Comedy Central",
     },
     {
-        key: "brand",
+        key: "other",
         img: reel,
         headline: "OTHER",
         subtitle: "SPIEGEL TV, MONKEY Pictures",

@@ -98,6 +98,10 @@ function App() {
     }, []);
 
     const [visibleModal, setVisibleModal] = useState(null);
+    function hideModal() {
+        setVisibleModal(null);
+        stopAllVideos();
+    }
 
     return (
         <div
@@ -121,33 +125,44 @@ function App() {
                         transform: `translate3d(0, -${scrollYOffset / 5}px, 0)`,
                     }}
                 />
+
                 <Content
                     visibleModal={visibleModal}
                     setVisibleModal={setVisibleModal}
                     scrollYOffset={scrollYOffset}
                 />
+
                 <Footer />
 
                 <Overlay
                     visible={visibleModal === "tv"}
                     data={data.tv}
-                    hideModal={() => setVisibleModal(null)}
+                    hideModal={hideModal}
                 />
 
                 <Overlay
                     visible={visibleModal === "brand"}
                     data={data.brand}
-                    hideModal={() => setVisibleModal(null)}
+                    hideModal={hideModal}
                 />
 
                 <Overlay
                     visible={visibleModal === "other"}
                     data={data.other}
-                    hideModal={() => setVisibleModal(null)}
+                    hideModal={hideModal}
                 />
             </div>
         </div>
     );
+}
+
+function stopAllVideos() {
+    const elements = document.querySelectorAll(".overlay-wrapper iframe");
+    elements.forEach(el => {
+        const oldSrc = el.src;
+        el.src = "";
+        el.src = oldSrc.replace("&autoplay=1", "");
+    });
 }
 
 function addVisibleClassToVisibleElements(yOffset = 0) {

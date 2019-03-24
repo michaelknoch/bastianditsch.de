@@ -41,11 +41,11 @@ const Overlay = ({ visible, hideModal, data }) => {
                         );
                     }}
                 >
-                    {data.map(({ videoId, title }) => (
+                    {data.map(({ videoId, ...remainingData }) => (
                         <Video
                             src={`https://player.vimeo.com/video/${videoId}?title=0&byline=0&portrait=0&autoplay=1`}
-                            title={title}
                             previewImage={require(`./videoPreviewImages/${videoId}.jpg`)}
+                            {...remainingData}
                         />
                     ))}
                 </div>

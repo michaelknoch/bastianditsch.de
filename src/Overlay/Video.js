@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import playButtonIcon from "./icons/play.svg";
 
-const Video = ({ src, title, previewImage }) => {
+const Video = ({ src, title, previewImage, description, company }) => {
     const [showIframe, setShowIframe] = useState(!previewImage);
 
     return (
@@ -40,6 +40,11 @@ const Video = ({ src, title, previewImage }) => {
                         alt="play button"
                     />
                 </div>
+            </div>
+            <div className="video-subtitle">
+                <h5>
+                    {description} / {company}
+                </h5>
             </div>
         </div>
     );

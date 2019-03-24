@@ -29,7 +29,6 @@ iframe {
 
 .title-wrapper {
     margin-top: 50px;
-    background-color: #101010;
     padding: 10px;
     max-width: 1200px;
 }
@@ -37,13 +36,15 @@ iframe {
 .title-wrapper span {
     color: white;
     cursor: pointer;
-    padding: 5px 0;
-    padding-right: 20px;
+    padding: 7px 10px;
+    margin: 0 10px;
     text-transform: uppercase;
 }
 
-.title-wrapper span.active {
-    color: orange;
+.title-wrapper span.active,
+.title-wrapper span:hover {
+    color: #101010;
+    background-color: white;
 }
 
 .scrollview-wrapper {
@@ -85,6 +86,7 @@ iframe {
     justify-content: center;
     align-items: center;
     display: flex;
+    flex-direction: column;
 }
 
 .video:last-child {
@@ -141,4 +143,9 @@ img.close-button:hover {
     position: absolute;
     left: calc(-20vw - 7px);
     scroll-snap-align: start;
+}
+
+.video-subtitle {
+    color: #636e72;
+    color: white;
 }
