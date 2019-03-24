@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Video from "./Video";
 
 import closeButtonIcon from "./icons/close.png";
@@ -8,6 +8,32 @@ import "./overlay.css";
 const Overlay = ({ visible, hideModal, data }) => {
     const scrollViewRef = useRef(null);
     const [visibleVideoIndex, setVisibleVideoIndex] = useState(0);
+
+    function handleKeyDown(e) {
+        if (e.keyCode === 39 || e.keyCode === 37) e.preventDefault();
+
+        let newIndex = visibleVideoIndex;
+        if (e.keyCode === 39) {
+            newIndex += 1;
+        } else if (e.keyCode === 37) {
+            newIndex -= 1;
+        }
+
+        if (visible) {
+            const safeIndex = Math.min(Math.max(newIndex, 0), data.length - 1);
+            const left = scrollViewRef.current.childNodes[safeIndex].offsetLeft;
+            scrollViewRef.current.scroll({
+                top: 0,
+                left,
+                behavior: "smooth",
+            });
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [visible, visibleVideoIndex]);
 
     return (
         <div

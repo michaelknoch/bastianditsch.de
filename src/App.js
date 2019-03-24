@@ -94,7 +94,7 @@ function App() {
 
     useEffect(() => {
         window.addEventListener("scroll", onScroll);
-        return () => window.removeListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
     const [visibleModal, setVisibleModal] = useState(null);
