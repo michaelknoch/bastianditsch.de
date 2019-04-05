@@ -9,13 +9,13 @@ import reel from "./images/reel.jpg";
 const data = [
     {
         key: "brand",
-        img: paramount,
+        img: mtv,
         headline: "BRAND TRAILERS",
         subtitle: "Viacom, MTV, Comedy Central",
     },
     {
         key: "tv",
-        img: mtv,
+        img: paramount,
         headline: "TV PROMOTION",
         subtitle: "paramount, Nick, SUPER RTL",
     },

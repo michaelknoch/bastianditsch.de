@@ -99,6 +99,10 @@ h3 {
     align-items: center;
 }
 
+.footer {
+    box-sizing: border-box;
+}
+
 @media (max-width: 767px) {
     #root {
         padding: 7px;

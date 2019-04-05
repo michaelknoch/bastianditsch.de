@@ -41,8 +41,8 @@ const Footer = ({ style }) => {
                         kontakt@bastianditsch.de
                     </a>
                 </span>
-                <span style={styles.span}>|</span>
-                <span style={styles.span}>+49 17661919116</span>
+                <span>|</span>
+                <span style={styles.span}>+49 176 61919116</span>
             </div>
         </div>
     );
@@ -64,7 +64,6 @@ const styles = {
     img: {
         height: "400px",
         width: "100%",
-        boxSizing: "border-box",
         borderLeft: "15px solid white",
         borderRight: "15px solid white",
     },
@@ -76,6 +75,11 @@ const styles = {
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
+
+        fontSize: "20px",
+        fontWeight: "600",
+        color: "black",
+        textTransform: "uppercase",
     },
 
     link: {
@@ -85,9 +89,7 @@ const styles = {
 
     span: {
         padding: "0px 10px",
-        fontSize: "20px",
-        fontWeight: "600",
-        color: "black",
+        minWidth: "280px",
     },
 };
 
