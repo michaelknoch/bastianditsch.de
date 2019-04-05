@@ -10,7 +10,9 @@ const Overlay = ({ visible, hideModal, data }) => {
     const [visibleVideoIndex, setVisibleVideoIndex] = useState(0);
 
     function handleKeyDown(e) {
-        if (e.keyCode === 39 || e.keyCode === 37) e.preventDefault();
+        if (e.keyCode === 39 || e.keyCode === 37) {
+            e.preventDefault();
+        }
 
         let newIndex = visibleVideoIndex;
         if (e.keyCode === 39) {
@@ -89,7 +91,8 @@ const Overlay = ({ visible, hideModal, data }) => {
                         key={i}
                         onClick={() => {
                             const left =
-                                scrollViewRef.current.childNodes[i].offsetLeft;
+                                scrollViewRef.current.childNodes[i].offsetLeft -
+                                window.innerWidth * 0.2;
                             scrollViewRef.current.scroll({
                                 top: 0,
                                 left,

@@ -15,9 +15,9 @@ const Video = ({ src, title, previewImage, description, company }) => {
                         title={title}
                         src={src}
                         frameBorder="0"
-                        allowFullscreen
-                        mozallowfullscreen
-                        webkitAllowFullScreen
+                        allowFullScreen
+                        mozallowfullscreen="true"
+                        webkitallowfullscreen="true"
                     />
                 )}
                 <div
