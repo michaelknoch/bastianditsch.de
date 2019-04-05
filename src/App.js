@@ -124,7 +124,7 @@ function App() {
             <div className="hide-mobile">
                 <Header
                     style={{
-                        transform: `translate3d(0, -${scrollYOffset / 5}px, 0)`,
+                        transform: `translate3d(0, -${scrollYOffset / 4}px, 0)`,
                     }}
                 />
 
@@ -134,7 +134,7 @@ function App() {
                     scrollYOffset={scrollYOffset}
                 />
 
-                <Footer />
+                <Footer scrollYOffset={scrollYOffset} />
 
                 <Overlay
                     visible={visibleModal === "tv"}
