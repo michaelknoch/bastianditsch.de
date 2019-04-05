@@ -9,13 +9,10 @@ const Footer = ({ style }) => {
         ? footerRef.current.getBoundingClientRect().y
         : 0;
 
-    console.log("footerYPosition", footerYPosition);
-
     const relativeYOffset = Math.max(
         0,
-        footerYPosition * -1 + window.innerHeight
+        footerYPosition * -1 + getWindowHeight()
     );
-    console.log(relativeYOffset);
 
     return (
         <div
@@ -35,17 +32,7 @@ const Footer = ({ style }) => {
                 }}
             />
 
-            <div
-                className="show-when-in-viewport"
-                style={{
-                    ...styles.contact,
-                    ...{
-                        transform: `translate3d(0, -${relativeYOffset /
-                            7}px, 0)`,
-                    },
-                }}
-            >
-                <span style={styles.span}>+49 17661919116</span>
+            <div className="show-when-in-viewport" style={styles.contact}>
                 <span style={styles.span}>
                     <a
                         style={styles.link}
@@ -54,6 +41,8 @@ const Footer = ({ style }) => {
                         kontakt@bastianditsch.de
                     </a>
                 </span>
+                <span style={styles.span}>|</span>
+                <span style={styles.span}>+49 17661919116</span>
             </div>
         </div>
     );
@@ -75,31 +64,39 @@ const styles = {
     img: {
         height: "400px",
         width: "100%",
+        boxSizing: "border-box",
+        borderLeft: "15px solid white",
+        borderRight: "15px solid white",
     },
 
     contact: {
-        backgroundColor: "black",
+        marginTop: "90px",
         padding: "10px 120px",
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        position: "absolute",
-        bottom: "90px",
-        marginLeft: "10vw",
     },
 
     link: {
-        color: "white",
+        color: "black",
         textDecoration: "none",
     },
 
     span: {
         padding: "0px 10px",
-        fontSize: "40px",
-        fontWeight: "900",
-        color: "white",
+        fontSize: "20px",
+        fontWeight: "600",
+        color: "black",
     },
 };
+
+function getWindowHeight() {
+    if (typeof window === "undefined") {
+        return 0;
+    }
+
+    return window.innerHeight;
+}
 
 export default Footer;
