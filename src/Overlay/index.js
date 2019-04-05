@@ -37,6 +37,17 @@ const Overlay = ({ visible, hideModal, data }) => {
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, [visible, visibleVideoIndex]);
 
+    const onClick = i => {
+        const left =
+            scrollViewRef.current.childNodes[i].offsetLeft -
+            window.innerWidth * 0.2;
+        scrollViewRef.current.scroll({
+            top: 0,
+            left,
+            behavior: "smooth",
+        });
+    };
+
     return (
         <div
             className={`overlay-wrapper ${visible ? "visible" : "hidden"}`}
@@ -69,8 +80,9 @@ const Overlay = ({ visible, hideModal, data }) => {
                         );
                     }}
                 >
-                    {data.map(({ videoId, ...remainingData }) => (
+                    {data.map(({ videoId, ...remainingData }, i) => (
                         <Video
+                            onClick={() => onClick(i)}
                             key={videoId}
                             src={`https://player.vimeo.com/video/${videoId}?title=0&byline=0&portrait=0&autoplay=1`}
                             previewImage={require(`./videoPreviewImages/${videoId}.jpg`)}
@@ -90,14 +102,7 @@ const Overlay = ({ visible, hideModal, data }) => {
                     <span
                         key={i}
                         onClick={() => {
-                            const left =
-                                scrollViewRef.current.childNodes[i].offsetLeft -
-                                window.innerWidth * 0.2;
-                            scrollViewRef.current.scroll({
-                                top: 0,
-                                left,
-                                behavior: "smooth",
-                            });
+                            onClick(i);
                         }}
                         className={`title ${
                             i === visibleVideoIndex ? "active" : ""
