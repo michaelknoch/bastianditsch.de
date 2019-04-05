@@ -4,7 +4,7 @@ import "./app.css";
 import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
-
+import mobile from "./gif/mobile.gif";
 import Overlay from "./Overlay";
 
 const data = {
@@ -116,37 +116,44 @@ function App() {
                 width: "100%",
             }}
         >
-            <Header
-                style={{
-                    transform: `translate3d(0, -${scrollYOffset / 5}px, 0)`,
-                }}
+            <img
+                className="mobile-only-img"
+                alt="Get a bigger screen"
+                src={mobile}
             />
+            <div className="hide-mobile">
+                <Header
+                    style={{
+                        transform: `translate3d(0, -${scrollYOffset / 5}px, 0)`,
+                    }}
+                />
 
-            <Content
-                visibleModal={visibleModal}
-                setVisibleModal={setVisibleModal}
-                scrollYOffset={scrollYOffset}
-            />
+                <Content
+                    visibleModal={visibleModal}
+                    setVisibleModal={setVisibleModal}
+                    scrollYOffset={scrollYOffset}
+                />
 
-            <Footer />
+                <Footer />
 
-            <Overlay
-                visible={visibleModal === "tv"}
-                data={data.tv}
-                hideModal={hideModal}
-            />
+                <Overlay
+                    visible={visibleModal === "tv"}
+                    data={data.tv}
+                    hideModal={hideModal}
+                />
 
-            <Overlay
-                visible={visibleModal === "brand"}
-                data={data.brand}
-                hideModal={hideModal}
-            />
+                <Overlay
+                    visible={visibleModal === "brand"}
+                    data={data.brand}
+                    hideModal={hideModal}
+                />
 
-            <Overlay
-                visible={visibleModal === "other"}
-                data={data.other}
-                hideModal={hideModal}
-            />
+                <Overlay
+                    visible={visibleModal === "other"}
+                    data={data.other}
+                    hideModal={hideModal}
+                />
+            </div>
         </div>
     );
 }
