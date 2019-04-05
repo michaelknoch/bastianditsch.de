@@ -103,55 +103,50 @@ function App() {
         stopAllVideos();
     }
 
+    useEffect(() => {
+        document.body.className = visibleModal ? "no-scroll" : "scroll";
+    }, [visibleModal]);
+
     return (
         <div
             style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
                 width: "100%",
-                // currently breaks scroll listener
-                // height: "100vh",
-                // overflow: visibleModal ? "hidden" : "scroll",
             }}
         >
-            <div
+            <Header
                 style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    width: "100%",
+                    transform: `translate3d(0, -${scrollYOffset / 5}px, 0)`,
                 }}
-            >
-                <Header
-                    style={{
-                        transform: `translate3d(0, -${scrollYOffset / 5}px, 0)`,
-                    }}
-                />
+            />
 
-                <Content
-                    visibleModal={visibleModal}
-                    setVisibleModal={setVisibleModal}
-                    scrollYOffset={scrollYOffset}
-                />
+            <Content
+                visibleModal={visibleModal}
+                setVisibleModal={setVisibleModal}
+                scrollYOffset={scrollYOffset}
+            />
 
-                <Footer />
+            <Footer />
 
-                <Overlay
-                    visible={visibleModal === "tv"}
-                    data={data.tv}
-                    hideModal={hideModal}
-                />
+            <Overlay
+                visible={visibleModal === "tv"}
+                data={data.tv}
+                hideModal={hideModal}
+            />
 
-                <Overlay
-                    visible={visibleModal === "brand"}
-                    data={data.brand}
-                    hideModal={hideModal}
-                />
+            <Overlay
+                visible={visibleModal === "brand"}
+                data={data.brand}
+                hideModal={hideModal}
+            />
 
-                <Overlay
-                    visible={visibleModal === "other"}
-                    data={data.other}
-                    hideModal={hideModal}
-                />
-            </div>
+            <Overlay
+                visible={visibleModal === "other"}
+                data={data.other}
+                hideModal={hideModal}
+            />
         </div>
     );
 }
