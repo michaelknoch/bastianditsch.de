@@ -146,6 +146,7 @@ img.close-button:hover {
 }
 
 .video-subtitle {
-    color: #636e72;
+    padding: 12px 0;
+    margin-top: 20px;
     color: white;
 }

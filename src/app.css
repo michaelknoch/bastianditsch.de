@@ -1,11 +1,20 @@
-@import url("https://fonts.googleapis.com/css?family=Chivo");
 @import url("https://fonts.googleapis.com/css?family=Overpass");
+
+@font-face {
+    font-family: LeagueGothic-Regular;
+    src: url("Fonts/LeagueGothic-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: LeagueGothic-Italic;
+    src: url("Fonts/LeagueGothic-Italic.otf") format("opentype");
+}
 
 body {
     display: flex;
-    background-color: #f9f4f1;
+    background-color: #f2f2f2;
     justify-content: center;
-    font-family: Overpass;
+    font-family: LeagueGothic-Regular;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -13,13 +22,11 @@ body {
     padding: 0;
 }
 
-h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-    font-family: Chivo;
+h4 {
+    font-family: LeagueGothic-Italic;
+    text-transform: uppercase;
 }
 
 .no-scroll {
@@ -32,13 +39,17 @@ h6 {
 }
 
 h1 {
-    font-size: 14px;
+    font-size: 33px;
     font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 0;
 }
 
 h2 {
-    font-size: 40px;
     margin: 0;
+
+    font-size: 100px;
+    font-weight: 100;
 }
 
 h3 {
@@ -151,4 +162,22 @@ h3 {
     90% {
         transform: translate(-10%, 10%);
     }
+}
+
+.header h3 {
+    margin-left: 125px;
+}
+
+.header h2 {
+    position: relative;
+}
+
+.header h2:after {
+    content: "";
+    border-bottom: 2px solid black;
+    width: 500px;
+    position: absolute;
+    left: -160px;
+    right: 0;
+    bottom: 0;
 }

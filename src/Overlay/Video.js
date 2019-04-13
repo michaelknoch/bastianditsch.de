@@ -43,9 +43,9 @@ const Video = ({ src, title, previewImage, description, company, onClick }) => {
                 </div>
             </div>
             <div className="video-subtitle">
-                <h5>
+                <span>
                     {description} / {company}
-                </h5>
+                </span>
             </div>
         </div>
     );

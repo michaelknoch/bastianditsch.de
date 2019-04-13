@@ -3,7 +3,7 @@ import React from "react";
 import simpsons from "./gif/simpsons.gif";
 
 const Header = ({ style }) => (
-    <div style={{ ...styles.header, ...style }} className="container">
+    <div style={{ ...styles.header, ...style }} className="header container">
         <div
             style={{
                 display: "flex",
@@ -24,9 +24,10 @@ const Header = ({ style }) => (
             <div style={{ flexDirection: "row", paddingBottom: "50px" }}>
                 <h1>Bastian Ditsch</h1>
                 <h2>Video Editor</h2>
-                <span style={{ display: "flex", maxWidth: "40%" }}>
+                <span style={{ display: "flex" }}>
                     <h3>
-                        Using other people's content to create my own. i'm an
+                        Using other people's content to create my own i'm an
+                        <br />
                         editor. i edit.
                     </h3>
                 </span>

@@ -28,6 +28,7 @@ const Footer = ({ style }) => {
                         backgroundImage: `url(${saul})`,
                         backgroundSize: "cover",
                         backgroundPositionY: `-${relativeYOffset / 4}px`,
+                        backgroundRepeat: "no-repeat",
                     },
                 }}
             />
@@ -62,7 +63,7 @@ const styles = {
     },
 
     img: {
-        height: "400px",
+        height: "25vw",
         width: "100%",
         borderLeft: "15px solid white",
         borderRight: "15px solid white",
@@ -78,18 +79,17 @@ const styles = {
 
         fontSize: "20px",
         fontWeight: "600",
-        color: "black",
+        color: "#CCCCCC",
         textTransform: "uppercase",
     },
 
     link: {
-        color: "black",
+        color: "#CCCCCC",
         textDecoration: "none",
     },
 
     span: {
         padding: "0px 10px",
-        minWidth: "280px",
     },
 };
 
