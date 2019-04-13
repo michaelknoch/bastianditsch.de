@@ -5,8 +5,14 @@ jobs:
         docker:
             - image: node:10
         steps:
+            - restore_cache:
+                  key: node-modules-{{ checksum "package.json" }}
             - checkout
             - run: yarn
+            - save_cache:
+                  key: dependency-cache-{{ checksum "package.json" }}
+                  paths:
+                      - ./node_modules
 
     deploy:
         working_directory: ~/project
@@ -18,7 +24,7 @@ jobs:
 
             - checkout
             - run: yarn
-            - run: yarn deploy
+            - run: yarn deploy --token $ZEIT_TOKEN
 
             - save_cache:
                   key: dependency-cache-{{ checksum "package.json" }}
