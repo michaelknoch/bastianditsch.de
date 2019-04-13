@@ -26,9 +26,9 @@ const Header = ({ style }) => (
                 <h2>Video Editor</h2>
                 <span style={{ display: "flex" }}>
                     <h3>
-                        Using other people's content to create my own i'm an
+                        Using other people's content to create my own.
                         <br />
-                        editor. i edit.
+                        i'm an editor. i edit.
                     </h3>
                 </span>
             </div>

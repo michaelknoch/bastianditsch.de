@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Overpass");
-
 @font-face {
     font-family: LeagueGothic-Regular;
     src: url("Fonts/LeagueGothic-Regular.otf") format("opentype");
@@ -22,6 +20,11 @@ body {
     padding: 0;
 }
 
+h1,
+h5 {
+    text-transform: uppercase;
+}
+
 h2,
 h3,
 h4 {
@@ -41,7 +44,6 @@ h4 {
 h1 {
     font-size: 33px;
     font-weight: 100;
-    text-transform: uppercase;
     margin-bottom: 0;
 }
 

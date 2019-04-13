@@ -8,7 +8,8 @@
     "bundle": "react-static bundle",
     "export": "react-static export",
     "deploy": "npm run build && now ./dist -A ../now.json",
-    "serve": "serve dist -p 3000 -s"
+    "serve": "serve dist -p 3000 -s",
+    "eslint": "eslint src"
   },
   "dependencies": {
     "http-server": "^0.11.1",
