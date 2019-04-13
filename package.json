@@ -1,28 +1,27 @@
 {
-  "name": "bastianditsch.de",
-  "private": true,
-  "scripts": {
-    "start": "react-static start",
-    "stage": "react-static build --staging",
-    "build": "react-static build",
-    "bundle": "react-static bundle",
-    "export": "react-static export",
-    "deploy": "npm run build && now ./dist -A ../now.json",
-    "serve": "serve dist -p 3000 -s",
-    "eslint": "eslint src"
-  },
-  "dependencies": {
-    "http-server": "^0.11.1",
-    "now": "^15.0.4",
-    "prettier": "^1.16.4",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "react-hot-loader": "^4.3.12",
-    "react-static": "^6.0.18",
-    "smoothscroll-polyfill": "^0.4.3"
-  },
-  "devDependencies": {
-    "eslint-config-react-tools": "1.x.x",
-    "serve": "10.1.1"
-  }
+    "name": "bastianditsch.de",
+    "private": true,
+    "scripts": {
+        "start": "react-static start",
+        "stage": "react-static build --staging",
+        "build": "react-static build",
+        "bundle": "react-static bundle",
+        "export": "react-static export",
+        "deploy": "npm run build && now ./dist -A ../now.json",
+        "serve": "serve dist -p 3000 -s",
+        "eslint": "eslint src"
+    },
+    "dependencies": {
+        "react": "^16.8.1",
+        "react-dom": "^16.8.1",
+        "react-hot-loader": "^4.3.12",
+        "react-static": "6.0.18",
+        "smoothscroll-polyfill": "^0.4.3"
+    },
+    "devDependencies": {
+        "eslint-config-react-tools": "1.x.x",
+        "now": "^15.0.4",
+        "prettier": "^1.16.4",
+        "serve": "10.1.1"
+    }
 }
