@@ -1,0 +1,42 @@
+version: 2
+jobs:
+    build:
+        working_directory: ~/project
+        docker:
+            - image: node:10
+        steps:
+            - checkout
+            - run: yarn
+
+    deploy:
+        working_directory: ~/project
+        docker:
+            - image: node:10
+        steps:
+            - restore_cache:
+                  key: node-modules-{{ checksum "package.json" }}
+
+            - checkout
+            - run: yarn
+            - run: yarn deploy
+
+            - save_cache:
+                  key: dependency-cache-{{ checksum "package.json" }}
+                  paths:
+                      - ./node_modules
+
+workflows:
+    version: 2
+    node:
+        jobs:
+            - build:
+                  filters:
+                      branches:
+                          ignore:
+                              - master
+
+            - deploy:
+                  filters:
+                      branches:
+                          only:
+                              - master
