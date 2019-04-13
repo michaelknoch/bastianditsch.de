@@ -1,0 +1,16 @@
+.header h3 {
+    margin-left: 125px;
+}
+
+.header h2 {
+    position: relative;
+}
+
+.header h2:after {
+    content: "";
+    border-bottom: 2px solid black;
+    position: absolute;
+    left: -160px;
+    right: -11px;
+    bottom: 0;
+}

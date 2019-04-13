@@ -27,7 +27,7 @@ const Footer = ({ style }) => {
                     ...{
                         backgroundImage: `url(${saul})`,
                         backgroundSize: "cover",
-                        backgroundPositionY: `-${relativeYOffset / 4}px`,
+                        backgroundPositionY: `-${relativeYOffset / 3}px`,
                         backgroundRepeat: "no-repeat",
                     },
                 }}

@@ -1,6 +1,8 @@
 import React from "react";
 
-import simpsons from "./gif/simpsons.gif";
+import simpsons from "../gif/simpsons.gif";
+
+import "./Header.css";
 
 const Header = ({ style }) => (
     <div style={{ ...styles.header, ...style }} className="header container">
@@ -21,9 +23,15 @@ const Header = ({ style }) => (
                 display: "flex",
             }}
         >
-            <div style={{ flexDirection: "row", paddingBottom: "50px" }}>
+            <div
+                style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    paddingBottom: "50px",
+                }}
+            >
                 <h1>Bastian Ditsch</h1>
-                <h2>Video Editor</h2>
+                <h2 style={{ alignSelf: "flex-start" }}>Video Editor</h2>
                 <span style={{ display: "flex" }}>
                     <h3>
                         Using other people's content to create my own.
