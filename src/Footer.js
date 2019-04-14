@@ -58,15 +58,16 @@ const styles = {
         zIndex: 100,
 
         padding: "50px 0",
-        minHeight: "800px",
+        minHeight: "95vh",
         position: "relative",
     },
 
     img: {
         height: "25vw",
         width: "100%",
-        borderLeft: "15px solid white",
-        borderRight: "15px solid white",
+        borderLeft: "20px solid #f2f2f2",
+        borderRight: "20px solid #f2f2f2",
+        boxSizing: "border-box",
     },
 
     contact: {
