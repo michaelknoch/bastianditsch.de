@@ -5,7 +5,7 @@ import simpsons from "../gif/simpsons.gif";
 import "./Header.css";
 
 const Header = ({ style }) => (
-    <div style={{ ...styles.header, ...style }} className="header container">
+    <div style={style} className="header container">
         <div
             style={{
                 display: "flex",
@@ -43,16 +43,5 @@ const Header = ({ style }) => (
         </div>
     </div>
 );
-
-const styles = {
-    header: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "flex-end",
-        height: "100vh",
-        padding: "0 20px",
-    },
-};
 
 export default Header;

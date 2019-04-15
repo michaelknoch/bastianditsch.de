@@ -66,8 +66,8 @@ const styles = {
     img: {
         height: "25vw",
         width: "100%",
-        borderLeft: "20px solid #f2f2f2",
-        borderRight: "20px solid #f2f2f2",
+        borderLeft: "50px solid #f2f2f2",
+        borderRight: "50px solid #f2f2f2",
         boxSizing: "border-box",
     },
 
@@ -93,12 +93,12 @@ const styles = {
     },
 };
 
-function getWindowHeight() {
-    if (typeof window === "undefined") {
-        return 0;
-    }
+// function getWindowHeight() {
+//     if (typeof window === "undefined") {
+//         return 0;
+//     }
 
-    return window.innerHeight;
-}
+//     return window.innerHeight;
+// }
 
 export default Footer;
