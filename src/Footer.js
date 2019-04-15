@@ -5,14 +5,14 @@ import saul from "./gif/saul.gif";
 const Footer = ({ style }) => {
     const footerRef = useRef(null);
 
-    const footerYPosition = footerRef.current
-        ? footerRef.current.getBoundingClientRect().y
-        : 0;
+    // const footerYPosition = footerRef.current
+    //     ? footerRef.current.getBoundingClientRect().y
+    //     : 0;
 
-    const relativeYOffset = Math.max(
-        0,
-        footerYPosition * -1 + getWindowHeight()
-    );
+    // const relativeYOffset = Math.max(
+    //     0,
+    //     footerYPosition * -1 + getWindowHeight()
+    // );
 
     return (
         <div
@@ -27,7 +27,8 @@ const Footer = ({ style }) => {
                     ...{
                         backgroundImage: `url(${saul})`,
                         backgroundSize: "cover",
-                        backgroundPositionY: `-${relativeYOffset / 3}px`,
+                        // backgroundPositionY: `-${relativeYOffset / 3}px`,
+                        backgroundPositionY: "center",
                         backgroundRepeat: "no-repeat",
                     },
                 }}
@@ -77,9 +78,7 @@ const styles = {
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-
-        fontSize: "20px",
-        fontWeight: "600",
+        fontSize: "38px",
         color: "#CCCCCC",
         textTransform: "uppercase",
     },

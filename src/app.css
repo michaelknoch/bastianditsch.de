@@ -13,6 +13,7 @@ body {
     background-color: #f2f2f2;
     justify-content: center;
     font-family: LeagueGothic-Regular;
+    font-weight: 100;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -23,6 +24,10 @@ body {
 h1,
 h5 {
     text-transform: uppercase;
+}
+
+h5 {
+    font-size: 17px;
 }
 
 h2,
@@ -42,21 +47,17 @@ h4 {
 }
 
 h1 {
-    font-size: 33px;
-    font-weight: 100;
+    font-size: 23px;
     margin-bottom: 0;
 }
 
 h2 {
     margin: 0;
-
     font-size: 100px;
-    font-weight: 100;
 }
 
 h3 {
     font-size: 30px;
-    font-weight: 100;
 }
 
 .grain {

@@ -5,6 +5,7 @@ import "./contentStyle.css";
 import mtv from "./images/mtv.jpg";
 import paramount from "./images/paramount.jpg";
 import reel from "./images/reel.jpg";
+import _private from "./images/private.jpg";
 
 const data = [
     {
@@ -25,6 +26,7 @@ const data = [
         headline: "OTHER",
         subtitle: "SPIEGEL TV, MONKEY Pictures",
     },
+    { key: "private", img: _private, headline: "PRIVATE PARTS" },
 ];
 
 const Content = ({ style, scrollYOffset, visibleModal, setVisibleModal }) => (
