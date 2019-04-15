@@ -5,7 +5,7 @@ import closeButtonIcon from "./icons/close.png";
 
 import "./overlay.css";
 
-const Overlay = ({ visible, hideModal, data }) => {
+const Overlay = ({ visible, hideModal, videos }) => {
     const scrollViewRef = useRef(null);
     const [visibleVideoIndex, setVisibleVideoIndex] = useState(0);
 
@@ -27,7 +27,10 @@ const Overlay = ({ visible, hideModal, data }) => {
         }
 
         if (visible) {
-            const safeIndex = Math.min(Math.max(newIndex, 0), data.length - 1);
+            const safeIndex = Math.min(
+                Math.max(newIndex, 0),
+                videos.length - 1
+            );
             const left = scrollViewRef.current.childNodes[safeIndex].offsetLeft;
             scrollViewRef.current.scroll({
                 top: 0,
@@ -85,7 +88,7 @@ const Overlay = ({ visible, hideModal, data }) => {
                         );
                     }}
                 >
-                    {data.map(({ videoId, ...remainingData }, i) => (
+                    {videos.map(({ videoId, ...remainingData }, i) => (
                         <Video
                             onClick={() => onClick(i)}
                             key={videoId}
@@ -103,7 +106,7 @@ const Overlay = ({ visible, hideModal, data }) => {
                     e.stopPropagation();
                 }}
             >
-                {data.map((d, i) => (
+                {videos.map((d, i) => (
                     <span
                         key={i}
                         onClick={() => {

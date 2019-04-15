@@ -2,34 +2,7 @@ import React from "react";
 
 import "./contentStyle.css";
 
-import mtv from "./images/mtv.jpg";
-import paramount from "./images/paramount.jpg";
-import reel from "./images/reel.jpg";
-import _private from "./images/private.jpg";
-
-const data = [
-    {
-        key: "brand",
-        img: mtv,
-        headline: "BRAND TRAILERS",
-        subtitle: "Viacom, MTV, Comedy Central",
-    },
-    {
-        key: "tv",
-        img: paramount,
-        headline: "TV PROMOTION",
-        subtitle: "paramount, Nick, SUPER RTL",
-    },
-    {
-        key: "other",
-        img: reel,
-        headline: "OTHER",
-        subtitle: "SPIEGEL TV, MONKEY Pictures",
-    },
-    { key: "private", img: _private, headline: "PRIVATE PARTS" },
-];
-
-const Content = ({ style, scrollYOffset, visibleModal, setVisibleModal }) => (
+const Content = ({ data, scrollYOffset, visibleModal, setVisibleModal }) => (
     <div className={"content-wrapper " + (visibleModal ? "rotatescale" : "")}>
         <div className="content container">
             {data.map(({ img, headline, subtitle, key }) => (
