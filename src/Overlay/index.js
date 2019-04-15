@@ -10,8 +10,13 @@ const Overlay = ({ visible, hideModal, data }) => {
     const [visibleVideoIndex, setVisibleVideoIndex] = useState(0);
 
     function handleKeyDown(e) {
-        if (e.keyCode === 39 || e.keyCode === 37) {
+        if (e.keyCode === 39 || e.keyCode === 37 || e.keyCode === 27) {
             e.preventDefault();
+        }
+
+        if (e.keyCode === 27) {
+            hideModal();
+            return;
         }
 
         let newIndex = visibleVideoIndex;
