@@ -31,12 +31,7 @@ const Overlay = ({ visible, hideModal, videos }) => {
                 Math.max(newIndex, 0),
                 videos.length - 1
             );
-            const left = scrollViewRef.current.childNodes[safeIndex].offsetLeft;
-            scrollViewRef.current.scroll({
-                top: 0,
-                left,
-                behavior: "smooth",
-            });
+            onClick(safeIndex);
         }
     }
 
