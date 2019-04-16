@@ -40,16 +40,6 @@ function App() {
         document.body.className = visibleModal ? "no-scroll" : "scroll";
     }, [visibleModal]);
 
-    const [renderOverlays, setRenderOverlays] = useState(false);
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setRenderOverlays(true);
-        }, 800);
-        return () => {
-            clearTimeout(timer);
-        };
-    }, []);
-
     return (
         <div
             style={{
@@ -77,15 +67,14 @@ function App() {
                     data={data}
                 />
                 <Footer />
-                {(renderOverlays || visibleModal) &&
-                    data.map(({ key, videos }) => (
-                        <Overlay
-                            key={key}
-                            visible={visibleModal === key}
-                            videos={videos}
-                            hideModal={hideModal}
-                        />
-                    ))}
+                {data.map(({ key, videos }) => (
+                    <Overlay
+                        key={key}
+                        visible={visibleModal === key}
+                        videos={videos}
+                        hideModal={hideModal}
+                    />
+                ))}
                 }
             </div>
         </div>
