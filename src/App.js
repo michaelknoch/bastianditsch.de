@@ -40,6 +40,16 @@ function App() {
         document.body.className = visibleModal ? "no-scroll" : "scroll";
     }, [visibleModal]);
 
+    const [renderOverlays, setRenderOverlays] = useState(false);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setRenderOverlays(true);
+        }, 800);
+        return () => {
+            clearTimeout(timer);
+        };
+    }, []);
+
     return (
         <div
             style={{
@@ -49,9 +59,6 @@ function App() {
                 width: "100%",
             }}
         >
-            <Head>
-                <title>Bastian Ditsch - Video Editor</title>
-            </Head>
             <img
                 className="mobile-only-img"
                 alt="Get a bigger screen"
@@ -63,24 +70,23 @@ function App() {
                         transform: `translate3d(0, -${scrollYOffset / 4}px, 0)`,
                     }}
                 />
-
                 <Content
                     visibleModal={visibleModal}
                     setVisibleModal={setVisibleModal}
                     scrollYOffset={scrollYOffset}
                     data={data}
                 />
-
                 <Footer />
-
-                {data.map(({ key, videos }) => (
-                    <Overlay
-                        key={key}
-                        visible={visibleModal === key}
-                        videos={videos}
-                        hideModal={hideModal}
-                    />
-                ))}
+                {(renderOverlays || visibleModal) &&
+                    data.map(({ key, videos }) => (
+                        <Overlay
+                            key={key}
+                            visible={visibleModal === key}
+                            videos={videos}
+                            hideModal={hideModal}
+                        />
+                    ))}
+                }
             </div>
         </div>
     );
