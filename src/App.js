@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Head } from "react-static";
 
 import "./app.css";
 import Header from "./Header";
@@ -48,6 +49,9 @@ function App() {
                 width: "100%",
             }}
         >
+            <Head>
+                <title>Bastian Ditsch - Video Editor</title>
+            </Head>
             <img
                 className="mobile-only-img"
                 alt="Get a bigger screen"

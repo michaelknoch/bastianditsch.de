@@ -48,7 +48,7 @@
 
 .content .element .text {
     flex: 1;
-    color: white;
+    color: #f2f2f2;
     padding: 15px;
     text-align: right;
 }
