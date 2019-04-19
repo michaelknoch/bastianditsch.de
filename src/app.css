@@ -1,10 +1,12 @@
 @font-face {
     font-family: LeagueGothic-Regular;
+    font-display: auto;
     src: url("Fonts/LeagueGothic-Regular.otf") format("opentype");
 }
 
 @font-face {
     font-family: LeagueGothic-Italic;
+    font-display: auto;
     src: url("Fonts/LeagueGothic-Italic.otf") format("opentype");
 }
 
