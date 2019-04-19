@@ -75,7 +75,6 @@ function App() {
                         hideModal={hideModal}
                     />
                 ))}
-                }
             </div>
         </div>
     );
