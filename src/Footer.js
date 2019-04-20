@@ -1,31 +1,19 @@
 import React, { useRef } from "react";
 
-const Footer = ({ style }) => {
-    const footerRef = useRef(null);
-
-    return (
-        <div
-            ref={footerRef}
-            className="container-fluid footer"
-            style={{ ...styles.footer, ...style }}
-        >
-            <div className="footer-img" style={styles.img} />
-
-            <div className="show-when-in-viewport" style={styles.contact}>
-                <span style={styles.span}>
-                    <a
-                        style={styles.link}
-                        href="mailto:kontakt@bastianditsch.de"
-                    >
-                        kontakt@bastianditsch.de
-                    </a>
-                </span>
-                <span>|</span>
-                <span style={styles.span}>+49 176 61919116</span>
-            </div>
+const Footer = ({ style }) => (
+    <div className="container-fluid footer" style={styles.footer}>
+        <div className="footer-img" style={styles.img} />
+        <div className="show-when-in-viewport" style={styles.contact}>
+            <span style={styles.span}>
+                <a style={styles.link} href="mailto:kontakt@bastianditsch.de">
+                    kontakt@bastianditsch.de
+                </a>
+            </span>
+            <span>|</span>
+            <span style={styles.span}>+49 176 61919116</span>
         </div>
-    );
-};
+    </div>
+);
 
 const styles = {
     footer: {

@@ -1,30 +1,38 @@
 import React, { useRef, useState, useEffect } from "react";
 import Video from "./Video";
 
-import "./overlay.css";
+import "./overlay.scss";
+
+const KEYS = {
+    ESCAPE: 27,
+    ARROW_LEFT: 37,
+    ARROW_RIGHT: 39,
+};
 
 const Overlay = ({ visible, hideModal, videos }) => {
-    const scrollViewRef = useRef(null);
     const [visibleVideoIndex, setVisibleVideoIndex] = useState(0);
 
-    function handleKeyDown(e) {
-        if (e.keyCode === 39 || e.keyCode === 37 || e.keyCode === 27) {
-            e.preventDefault();
+    function handleKeyDown(event) {
+        const pressedKey = event.keyCode;
+
+        if (Object.keys(KEYS).includes(pressedKey)) {
+            event.preventDefault();
         }
 
-        if (e.keyCode === 27) {
+        if (pressedKey === KEYS.ESCAPE) {
             hideModal();
             return;
         }
 
         let newIndex = visibleVideoIndex;
-        if (e.keyCode === 39) {
+        if (pressedKey === KEYS.ARROW_RIGHT) {
             newIndex += 1;
-        } else if (e.keyCode === 37) {
+        } else if (pressedKey === KEYS.ARROW_LEFT) {
             newIndex -= 1;
         }
 
         if (visible) {
+            // prevents jumping out of bounds
             const safeIndex = Math.min(
                 Math.max(newIndex, 0),
                 videos.length - 1
@@ -38,9 +46,10 @@ const Overlay = ({ visible, hideModal, videos }) => {
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, [visible, visibleVideoIndex]);
 
-    const onClick = i => {
+    const scrollViewRef = useRef(null);
+    const onClick = index => {
         const left =
-            scrollViewRef.current.childNodes[i].offsetLeft -
+            scrollViewRef.current.childNodes[index].offsetLeft -
             window.innerWidth * 0.2;
         scrollViewRef.current.scroll({
             top: 0,
@@ -66,8 +75,8 @@ const Overlay = ({ visible, hideModal, videos }) => {
 
             <div
                 className="scrollview-wrapper"
-                onClick={e => {
-                    e.stopPropagation();
+                onClick={event => {
+                    event.stopPropagation();
                 }}
             >
                 <div
@@ -81,9 +90,9 @@ const Overlay = ({ visible, hideModal, videos }) => {
                         );
                     }}
                 >
-                    {videos.map(({ videoId, ...remainingData }, i) => (
+                    {videos.map(({ videoId, ...remainingData }, index) => (
                         <Video
-                            onClick={() => onClick(i)}
+                            onClick={() => onClick(index)}
                             key={videoId}
                             src={`https://player.vimeo.com/video/${videoId}?title=0&byline=0&portrait=0&autoplay=1`}
                             pathTopreviewImage={`/images/videoPreviewImages/${videoId}.jpg`}
@@ -95,21 +104,21 @@ const Overlay = ({ visible, hideModal, videos }) => {
 
             <div
                 className="title-wrapper"
-                onClick={e => {
-                    e.stopPropagation();
+                onClick={event => {
+                    event.stopPropagation();
                 }}
             >
-                {videos.map((d, i) => (
+                {videos.map((video, index) => (
                     <span
-                        key={i}
+                        key={index}
                         onClick={() => {
-                            onClick(i);
+                            onClick(index);
                         }}
                         className={`title ${
-                            i === visibleVideoIndex ? "active" : ""
+                            index === visibleVideoIndex ? "active" : ""
                         }`}
                     >
-                        {d.title}
+                        {video.title}
                     </span>
                 ))}
             </div>
@@ -120,10 +129,10 @@ const Overlay = ({ visible, hideModal, videos }) => {
 function updateVideoIndex(e, scrollView, setVisibleVideoIndex) {
     const children = e.nativeEvent.srcElement.childNodes;
 
-    children.forEach((el, i) => {
+    children.forEach((el, index) => {
         const isVisible = isElementInViewport(el, scrollView);
         if (isVisible) {
-            setVisibleVideoIndex(i);
+            setVisibleVideoIndex(index);
         }
     });
 }

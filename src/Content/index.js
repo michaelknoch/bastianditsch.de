@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./contentStyle.css";
+import "./content.scss";
 
 const Content = ({ data, scrollYOffset, visibleModal, setVisibleModal }) => (
     <div className={"content-wrapper " + (visibleModal ? "rotatescale" : "")}>
