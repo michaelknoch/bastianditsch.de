@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import playButtonIcon from "./icons/play.png";
-
 const Video = ({
     src,
     title,
@@ -43,7 +41,7 @@ const Video = ({
                     }`}
                 >
                     <img
-                        src={playButtonIcon}
+                        src="/images/icons/play.png"
                         className="play-button"
                         alt="play button"
                     />

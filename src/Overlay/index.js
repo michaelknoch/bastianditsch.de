@@ -1,8 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import Video from "./Video";
 
-import closeButtonIcon from "./icons/close.png";
-
 import "./overlay.css";
 
 const Overlay = ({ visible, hideModal, videos }) => {
@@ -60,7 +58,7 @@ const Overlay = ({ visible, hideModal, videos }) => {
         >
             <div className="container">
                 <img
-                    src={closeButtonIcon}
+                    src="/images/icons/close.png"
                     className="close-button"
                     alt="close overlay"
                 />
