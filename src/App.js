@@ -9,24 +9,7 @@ import Overlay from "./Overlay";
 import { data } from "./data";
 
 function App() {
-    const [scrollYOffset, setScrollYOffset] = useState(0);
-
-    useEffect(() => {
-        addVisibleClassToVisibleElements();
-    }, []);
-
-    const onScroll = () => {
-        setScrollYOffset(window.scrollY);
-
-        window.requestAnimationFrame(() => {
-            addVisibleClassToVisibleElements();
-        });
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
-    }, []);
+    const scrollYOffset = useScrollListener();
 
     const [visibleModal, setVisibleModal] = useState(null);
     function hideModal() {
@@ -47,11 +30,6 @@ function App() {
                 width: "100%",
             }}
         >
-            <img
-                className="mobile-only-img"
-                alt="Get a bigger screen"
-                src="/images/gif/mobile.gif"
-            />
             <div className="hide-mobile">
                 <Header
                     style={{
@@ -74,9 +52,38 @@ function App() {
                     />
                 ))}
             </div>
+
+            {/* site is for desktop and tablet only */}
+            <img
+                className="mobile-only-img"
+                alt="Get a bigger screen"
+                src="/images/gif/mobile.gif"
+            />
         </div>
     );
 }
+
+const useScrollListener = () => {
+    useEffect(() => {
+        addVisibleClassToVisibleElements();
+    }, []);
+
+    const [scrollYOffset, setScrollYOffset] = useState(0);
+
+    const onScroll = () => {
+        setScrollYOffset(window.scrollY);
+        window.requestAnimationFrame(() => {
+            addVisibleClassToVisibleElements();
+        });
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
+    return scrollYOffset;
+};
 
 function stopAllVideos() {
     const elements = document.querySelectorAll(".overlay-wrapper iframe");

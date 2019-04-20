@@ -4,8 +4,8 @@ import smoothscroll from "smoothscroll-polyfill";
 
 import App from "./App";
 
-// client only
 if (typeof window !== "undefined") {
+    // required for smooth scrolling in safari
     smoothscroll.polyfill();
 }
 

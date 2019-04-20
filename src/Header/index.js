@@ -2,17 +2,11 @@ import React from "react";
 
 import simpsons from "../gif/simpsons.gif";
 
-import "./Header.css";
+import "./Header.scss";
 
 const Header = ({ style }) => (
     <div style={style} className="header container">
-        <div
-            style={{
-                display: "flex",
-                flex: 1,
-                alignItems: "center",
-            }}
-        >
+        <div className="gif-wrapper">
             <img src={simpsons} alt="funny gif" style={{ maxWidth: 700 }} />
         </div>
 
