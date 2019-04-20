@@ -7,7 +7,7 @@
         "build": "react-static build",
         "bundle": "react-static bundle",
         "export": "react-static export",
-        "deploy": "yarn build && now ./dist -A ../now.json",
+        "deploy": "yarn build && now ./dist -A ../now.json --target production",
         "serve": "serve dist -p 3000 -s",
         "eslint": "eslint src"
     },
