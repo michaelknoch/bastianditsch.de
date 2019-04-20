@@ -88,7 +88,7 @@ const Overlay = ({ visible, hideModal, videos }) => {
                             onClick={() => onClick(i)}
                             key={videoId}
                             src={`https://player.vimeo.com/video/${videoId}?title=0&byline=0&portrait=0&autoplay=1`}
-                            previewImage={require(`./videoPreviewImages/${videoId}.jpg`)}
+                            pathTopreviewImage={`/images/videoPreviewImages/${videoId}.jpg`}
                             {...remainingData}
                         />
                     ))}

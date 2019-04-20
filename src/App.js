@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Head } from "react-static";
 
 import "./app.css";
 import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
-import mobile from "./gif/mobile.gif";
 import Overlay from "./Overlay";
 
 import { data } from "./data";
@@ -52,7 +50,7 @@ function App() {
             <img
                 className="mobile-only-img"
                 alt="Get a bigger screen"
-                src={mobile}
+                src="/images/gif/mobile.gif"
             />
             <div className="hide-mobile">
                 <Header

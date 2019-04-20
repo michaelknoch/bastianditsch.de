@@ -2,8 +2,15 @@ import React, { useState } from "react";
 
 import playButtonIcon from "./icons/play.png";
 
-const Video = ({ src, title, previewImage, description, company, onClick }) => {
-    const [showIframe, setShowIframe] = useState(!previewImage);
+const Video = ({
+    src,
+    title,
+    pathTopreviewImage,
+    description,
+    company,
+    onClick,
+}) => {
+    const [showIframe, setShowIframe] = useState(!pathTopreviewImage);
 
     return (
         <div className="video">
@@ -27,7 +34,7 @@ const Video = ({ src, title, previewImage, description, company, onClick }) => {
                         onClick();
                     }}
                     style={{
-                        background: `url(${previewImage})`,
+                        background: `url(${pathTopreviewImage})`,
                         backgroundSize: "cover",
                     }}
                     alt={title}

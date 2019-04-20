@@ -1,18 +1,7 @@
 import React, { useRef } from "react";
 
-import saul from "./gif/saul.gif";
-
 const Footer = ({ style }) => {
     const footerRef = useRef(null);
-
-    // const footerYPosition = footerRef.current
-    //     ? footerRef.current.getBoundingClientRect().y
-    //     : 0;
-
-    // const relativeYOffset = Math.max(
-    //     0,
-    //     footerYPosition * -1 + getWindowHeight()
-    // );
 
     return (
         <div
@@ -20,19 +9,7 @@ const Footer = ({ style }) => {
             className="container-fluid footer"
             style={{ ...styles.footer, ...style }}
         >
-            <div
-                className="footer-img"
-                style={{
-                    ...styles.img,
-                    ...{
-                        backgroundImage: `url(${saul})`,
-                        backgroundSize: "cover",
-                        // backgroundPositionY: `-${relativeYOffset / 3}px`,
-                        backgroundPositionY: "center",
-                        backgroundRepeat: "no-repeat",
-                    },
-                }}
-            />
+            <div className="footer-img" style={styles.img} />
 
             <div className="show-when-in-viewport" style={styles.contact}>
                 <span style={styles.span}>
@@ -69,6 +46,11 @@ const styles = {
         borderLeft: "50px solid #f2f2f2",
         borderRight: "50px solid #f2f2f2",
         boxSizing: "border-box",
+
+        backgroundImage: "url(/images/gif/saul.gif)",
+        backgroundSize: "cover",
+        backgroundPositionY: "center",
+        backgroundRepeat: "no-repeat",
     },
 
     contact: {
@@ -92,13 +74,5 @@ const styles = {
         padding: "0px 10px",
     },
 };
-
-// function getWindowHeight() {
-//     if (typeof window === "undefined") {
-//         return 0;
-//     }
-
-//     return window.innerHeight;
-// }
 
 export default Footer;
