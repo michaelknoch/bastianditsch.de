@@ -1,7 +1,7 @@
-import mtv from "./categoryImages/mtv.jpg";
-import paramount from "./categoryImages/paramount.jpg";
-import reel from "./categoryImages/reel.jpg";
-import _private from "./categoryImages/private.jpg";
+const mtv = "/images/categoryImages/mtv.jpg";
+const paramount = "/images/categoryImages/paramount.jpg";
+const reel = "/images/categoryImages/reel.jpg";
+const _private = "/images/categoryImages/private.jpg";
 
 export const data = [
     {
