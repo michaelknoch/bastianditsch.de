@@ -17,11 +17,12 @@
         "react-dom": "^16.8.1",
         "react-hot-loader": "^4.3.12",
         "react-static": "^6.0.18",
+        "react-static-plugin-sass": "^7.0.8",
         "smoothscroll-polyfill": "^0.4.3"
     },
     "devDependencies": {
-        "now": "^15.0.4",
         "eslint-config-react-tools": "1.x.x",
+        "now": "^15.0.4",
         "serve": "10.1.1"
     }
 }
