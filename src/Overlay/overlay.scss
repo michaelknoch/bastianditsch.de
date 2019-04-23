@@ -37,7 +37,7 @@
             text-transform: uppercase;
 
             &.active,
-            &.title-wrapper span:hover {
+            &:hover {
                 color: #101010;
                 background-color: #f2f2f2;
             }
