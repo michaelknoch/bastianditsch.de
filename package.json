@@ -16,7 +16,7 @@
         "react": "^16.8.1",
         "react-dom": "^16.8.1",
         "react-hot-loader": "^4.3.12",
-        "react-static": "^6.0.18",
+        "react-static": "7.0.9",
         "react-static-plugin-sass": "^7.0.8",
         "smoothscroll-polyfill": "^0.4.3"
     },
