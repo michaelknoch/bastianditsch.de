@@ -25,7 +25,7 @@ const Header = ({ style }) => (
                 }}
             >
                 <h1>Bastian Ditsch</h1>
-                <h2 style={{ alignSelf: "flex-start" }}>concepter</h2>
+                <h2 style={{ alignSelf: "flex-start" }}>video editor</h2>
                 <span style={{ display: "flex" }}>
                     <h3>
                         Using other people's content to create my own.
