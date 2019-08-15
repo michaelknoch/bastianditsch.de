@@ -40,7 +40,7 @@ export const data = [
         key: "tv",
         img: paramount,
         headline: "TV PROMOTION",
-        subtitle: "paramount, Nick, SUPER RTL",
+        subtitle: "Paramount, SuperRTL, Nick, Nicknight",
         videos: [
             {
                 videoId: "157603204",
@@ -49,10 +49,10 @@ export const data = [
                 company: "MONKEY Pictures",
             },
             {
-                videoId: "157904332",
-                title: "NICKNIGHT skins",
+                videoId: "344842598",
+                title: "SUPER RTL Friends",
                 description:
-                    "Trailer for the series skins on nicknight germany",
+                    "Trailer for the series Friends Freundinnen auf Mission for Super RTL",
                 company: "MONKEY Pictures",
             },
             {
@@ -62,9 +62,10 @@ export const data = [
                 company: "PIXEL JUNGLE",
             },
             {
-                videoId: "322429346",
-                title: "SUPER RTL trophy wife",
-                description: "Trailer for the series trophy wife for super rtl",
+                videoId: "157904332",
+                title: "NICKNIGHT skins",
+                description:
+                    "Trailer for the series skins on nicknight germany",
                 company: "MONKEY Pictures",
             },
         ],
@@ -73,7 +74,7 @@ export const data = [
         key: "other",
         img: reel,
         headline: "OTHER",
-        subtitle: "SPIEGEL TV, MONKEY Pictures",
+        subtitle: "MONKEY Pictures, SPIEGEL TV, STORK CLUB",
         videos: [
             {
                 videoId: "322430285",
@@ -114,4 +115,3 @@ export const data = [
         ],
     },
 ];
-
