@@ -1,15 +1,21 @@
 const mtv = "/images/categoryImages/mtv.jpg";
 const paramount = "/images/categoryImages/paramount.jpg";
-const reel = "/images/categoryImages/reel.jpg";
+const social = "/images/categoryImages/social.jpg";
 const _private = "/images/categoryImages/private.jpg";
 
 export const data = [
     {
-        key: "brand",
+        key: "brands",
         img: mtv,
-        headline: "BRAND TRAILERS",
-        subtitle: "Viacom, MTV, Comedy Central",
+        headline: "BRANDS",
+        subtitle: "MONKEY, Viacom, MTV, Comedy Central",
         videos: [
+            {
+                videoId: "322430285",
+                title: "MONKEY Pictures reel",
+                description: "Highlight reel for monkey pictures",
+                company: "MONKEY Pictures",
+            },
             {
                 videoId: "298737242",
                 title: "MTV brand",
@@ -40,8 +46,14 @@ export const data = [
         key: "tv",
         img: paramount,
         headline: "TV PROMOTION",
-        subtitle: "Paramount, SuperRTL, Nick, Nicknight",
+        subtitle: "SuperRTL, Paramount, Nick, Nicknight",
         videos: [
+            {
+                videoId: "380336560",
+                title: "SUPER RTL Mighty Mops",
+                description: "Trailer for the series Mighty Mops for Super RTL",
+                company: "MONKEY Pictures",
+            },
             {
                 videoId: "157603204",
                 title: "PARAMOUNT channel",
@@ -71,28 +83,29 @@ export const data = [
         ],
     },
     {
-        key: "other",
-        img: reel,
-        headline: "OTHER",
-        subtitle: "MONKEY Pictures, SPIEGEL TV, STORK CLUB",
+        key: "social",
+        img: social,
+        headline: "SOCIAL MEDIA",
+        subtitle: "Red Bull, Decathlon, HGTV",
         videos: [
             {
-                videoId: "322430285",
-                title: "MONKEY Pictures reel",
-                description: "Highlight reel for monkey pictures",
-                company: "MONKEY Pictures",
-            },
-            {
-                videoId: "157605820",
-                title: "SPIEGEL TV geschichte",
+                videoId: "380335336",
+                title: "RED BULL NJ5",
                 description:
-                    "Brand trailer for spiegel tv geschichte / spiegel tv pitch",
+                    "campaign for Red Bull Neymar Jr's Five. Girls Kick Ass",
                 company: "MONKEY Pictures",
             },
             {
-                videoId: "325508757",
-                title: "STORK CLUB Whisky",
-                description: "image trailer for STORK CLUB Whisky",
+                videoId: "380339211",
+                title: "DECATHLON ELOPS Bikes",
+                description:
+                    "campaign for Decathlon Deutschland. Urban Single Speed Bikes",
+                company: "MONKEY Pictures",
+            },
+            {
+                videoId: "380336130",
+                title: "HGTV Eva Padberg",
+                description: "Promo for Home & Garden TV with Eva Padberg",
                 company: "MONKEY PICTURES",
             },
         ],
