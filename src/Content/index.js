@@ -17,7 +17,7 @@ const Content = ({ data, scrollYOffset, visibleModal, setVisibleModal }) => (
                             <img
                                 src={img}
                                 alt="brand"
-                                className="img-responsive"
+                                className="img-responsive brand"
                             />
                         </div>
 
