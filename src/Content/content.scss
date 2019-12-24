@@ -32,12 +32,17 @@
         align-items: center;
         padding: 130px 20px;
 
+        img.brand {
+            max-height: 800px;
+        }
+
         .mouseover {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             transition-duration: 0.15s;
             transition-timing-function: ease-out;
+            min-width: 55vw;
         }
 
         .mouseover:hover {
