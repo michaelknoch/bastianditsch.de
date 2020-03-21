@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, memo } from "react";
 import Video from "./Video";
 
 import "./overlay.scss";
@@ -156,4 +156,4 @@ export function isElementInViewport(el, scrollView) {
     );
 }
 
-export default Overlay;
+export default memo(Overlay);

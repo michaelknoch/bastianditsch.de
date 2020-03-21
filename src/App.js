@@ -22,14 +22,7 @@ function App() {
     }, [visibleModal]);
 
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                width: "100%",
-            }}
-        >
+        <div className="app">
             <div className="hide-mobile">
                 <Header
                     style={{

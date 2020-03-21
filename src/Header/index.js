@@ -1,13 +1,15 @@
-import React from "react";
-
-import simpsons from "../gif/simpsons.gif";
+import React, { memo } from "react";
 
 import "./Header.scss";
 
 const Header = ({ style }) => (
     <div style={style} className="header container">
         <div className="gif-wrapper">
-            <img src={simpsons} alt="funny gif" style={{ maxWidth: 700 }} />
+            <img
+                src="/images/gif/simpsons.gif"
+                alt="funny gif"
+                style={{ maxWidth: 700 }}
+            />
         </div>
 
         <div
@@ -31,6 +33,8 @@ const Header = ({ style }) => (
                         Using other people's content to create my own.
                         <br />
                         i'm an editor. i edit.
+                        <br />
+                        (i'm an idea person, too. sometimes.)
                     </h3>
                 </span>
             </div>
@@ -38,4 +42,4 @@ const Header = ({ style }) => (
     </div>
 );
 
-export default Header;
+export default memo(Header);

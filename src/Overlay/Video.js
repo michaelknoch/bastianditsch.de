@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 
 const Video = ({
     src,
@@ -58,4 +58,4 @@ const Video = ({
     );
 };
 
-export default Video;
+export default memo(Video);

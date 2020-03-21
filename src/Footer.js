@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, memo } from "react";
 
 const Footer = ({ style }) => (
     <div className="container-fluid footer" style={styles.footer}>
@@ -73,4 +73,4 @@ const styles = {
     },
 };
 
-export default Footer;
+export default memo(Footer);
