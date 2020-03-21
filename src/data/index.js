@@ -49,6 +49,12 @@ export const data = [
         subtitle: "SuperRTL, Paramount, Nick, Nicknight",
         videos: [
             {
+                videoId: "387259970",
+                title: "SUPER RTL Ricky Zoom",
+                description: "Trailer for the series Ricky Zoom for Super RTL",
+                company: "MONKEY Pictures",
+            },
+            {
                 videoId: "380336560",
                 title: "SUPER RTL Mighty Mops",
                 description: "Trailer for the series Mighty Mops for Super RTL",
@@ -88,6 +94,14 @@ export const data = [
         headline: "SOCIAL MEDIA",
         subtitle: "Red Bull, Decathlon, HGTV",
         videos: [
+            {
+                videoId: "393037994",
+                title: "DECATHLON Social Pitch",
+                description:
+                    "Decathlon Pitch showcasing the use of social formats - Instagram Story Bikes",
+                company: "MONKEY Pictures",
+                edit: "Bastian Ditsch",
+            },
             {
                 videoId: "380335336",
                 title: "RED BULL NJ5",
