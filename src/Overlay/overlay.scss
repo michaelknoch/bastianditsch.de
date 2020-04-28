@@ -30,7 +30,7 @@
         max-width: 1200px;
 
         span {
-            color: #f2f2f2;
+            color: #fbfbfb;
             cursor: pointer;
             padding: 7px 10px;
             margin: 0 10px;
@@ -39,7 +39,7 @@
             &.active,
             &:hover {
                 color: #101010;
-                background-color: #f2f2f2;
+                background-color: #fbfbfb;
             }
         }
     }
@@ -147,7 +147,7 @@
     .video-subtitle {
         text-transform: uppercase;
         margin-top: 22px;
-        color: #f2f2f2;
+        color: #fbfbfb;
         font-size: 22px;
     }
 }

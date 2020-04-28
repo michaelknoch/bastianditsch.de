@@ -3,7 +3,7 @@ import { Html, Head, Body } from "react-static";
 
 export default {
     getSiteData: () => ({
-        title: "Bastian Ditsch - Vide Editor",
+        title: "Bastian Ditsch - Video Editor",
     }),
     plugins: ["react-static-plugin-sass"],
     Document: ({ Html, Head, Body, children }) => (

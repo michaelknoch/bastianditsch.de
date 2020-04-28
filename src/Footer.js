@@ -41,8 +41,8 @@ const styles = {
     img: {
         height: "25vw",
         width: "100%",
-        borderLeft: "50px solid #f2f2f2",
-        borderRight: "50px solid #f2f2f2",
+        borderLeft: "50px solid #fbfbfb",
+        borderRight: "50px solid #fbfbfb",
         boxSizing: "border-box",
 
         backgroundImage: "url(/images/gif/saul.gif)",

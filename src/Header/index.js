@@ -34,7 +34,7 @@ const Header = ({ style }) => (
                         <br />
                         i'm an editor. i edit.
                         <br />
-                        (i'm an idea person, too. sometimes.)
+                        i'm an idea person, too. sometimes.
                     </h3>
                 </span>
             </div>

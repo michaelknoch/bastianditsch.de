@@ -118,7 +118,7 @@ export const data = [
                 title: "RED BULL NJ5",
                 description:
                     "campaign for Red Bull Neymar Jr's Five. Girls Kick Ass",
-                company: "MONKEY Pictures _ concept/director/edit",
+                company: "MONKEY Pictures _ concept/directing/edit",
             },
             {
                 videoId: "380339211",
@@ -140,6 +140,11 @@ export const data = [
         img: _private,
         headline: "PRIVATE PARTS",
         videos: [
+            {
+                videoId: "412681236",
+                title: "stuff / UBBBRRRU",
+                description: "UBBBRRRU EP teaser",
+            },
             {
                 videoId: "160899912",
                 title: "stuff / drawn",

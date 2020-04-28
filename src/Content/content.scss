@@ -19,7 +19,7 @@
         position: relative;
         &:after {
             content: "";
-            border-bottom: 2px solid #f2f2f2;
+            border-bottom: 2px solid #fbfbfb;
             width: 500px;
             position: absolute;
             right: 0;
@@ -51,7 +51,7 @@
         }
         .text {
             flex: 1;
-            color: #f2f2f2;
+            color: #fbfbfb;
             padding: 15px;
             text-align: right;
         }
