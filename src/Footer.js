@@ -59,7 +59,7 @@ const styles = {
         justifyContent: "center",
         alignItems: "center",
         fontSize: "38px",
-        color: "#CCCCCC",
+        color: "#CACACA",
         textTransform: "uppercase",
     },
 
