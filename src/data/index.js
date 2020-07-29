@@ -46,31 +46,52 @@ export const data = [
         key: "tv",
         img: paramount,
         headline: "TV/ONLINE PROMOTION",
-        subtitle: "RED BULL, HGTV, SuperRTL, Paramount, Nick, Nicknight",
+        subtitle:
+            "RED BULL, HGTV, BELSAZAR, SuperRTL, Paramount, Nick, Nicknight",
         videos: [
+            {
+                videoId: "387259970",
+                title: "SUPER RTL Ricky Zoom",
+                description: "Trailer for the series Ricky Zoom for Super RTL",
+                company: "MONKEY Pictures _ concept/copy/edit",
+            },
             {
                 videoId: "394959276",
                 title: "RED BULL Streetball",
                 description: "Promo for RED BULL Reign Campaign",
-                company: "MONKEY Pictures _ concept",
+                company: "MONKEY Pictures _ concept/copy",
             },
             {
                 videoId: "387523189",
                 title: "HGTV Promo Traumbad",
                 description: "Promo for the HGTV show Mein neues Traumbad.",
-                company: "MONKEY Pictures _ concept/edit",
+                company: "MONKEY Pictures _ concept/copy/edit",
             },
             {
-                videoId: "387259970",
-                title: "SUPER RTL Ricky Zoom",
-                description: "Trailer for the series Ricky Zoom for Super RTL",
-                company: "MONKEY Pictures _ concept/edit",
+                videoId: "380351972",
+                title: "BELSAZAR Vermouth",
+                description:
+                    "online and event presentation video series for Belsazar Vermouth",
+                company: "MONKEY Pictures _ concept/copy/edit",
             },
             {
                 videoId: "380336560",
                 title: "SUPER RTL Mighty Mops",
                 description: "Trailer for the series Mighty Mops for Super RTL",
-                company: "MONKEY Pictures _ concept/edit",
+                company: "MONKEY Pictures _ concept/copy/edit",
+            },
+            {
+                videoId: "344842598",
+                title: "SUPER RTL Friends",
+                description:
+                    "Trailer for the series Friends Freundinnen auf Mission for Super RTL",
+                company: "MONKEY Pictures _ concept/copy/edit",
+            },
+            {
+                videoId: "322428240",
+                title: "NICK sofakino",
+                description: "sofakino trailer for nick germany",
+                company: "PIXEL JUNGLE _ concept/copy/edit",
             },
             {
                 videoId: "157603204",
@@ -79,24 +100,11 @@ export const data = [
                 company: "MONKEY Pictures _ concept/edit",
             },
             {
-                videoId: "344842598",
-                title: "SUPER RTL Friends",
-                description:
-                    "Trailer for the series Friends Freundinnen auf Mission for Super RTL",
-                company: "MONKEY Pictures _ concept/edit",
-            },
-            {
-                videoId: "322428240",
-                title: "NICK sofakino",
-                description: "sofakino trailer for nick germany",
-                company: "PIXEL JUNGLE _ concept/edit",
-            },
-            {
                 videoId: "157904332",
                 title: "NICKNIGHT skins",
                 description:
                     "Trailer for the series skins on nicknight germany",
-                company: "MONKEY Pictures _ concept/edit",
+                company: "MONKEY Pictures _ concept/copy/edit",
             },
         ],
     },
@@ -104,7 +112,7 @@ export const data = [
         key: "social",
         img: social,
         headline: "SOCIAL MEDIA",
-        subtitle: "Red Bull, Decathlon, HGTV",
+        subtitle: "Red Bull, Decathlon, Belsazar, HGTV",
         videos: [
             {
                 videoId: "393037994",
@@ -114,13 +122,6 @@ export const data = [
                 company: "MONKEY Pictures _ concept/edit",
             },
             {
-                videoId: "380335336",
-                title: "RED BULL NJ5",
-                description:
-                    "campaign for Red Bull Neymar Jr's Five. Girls Kick Ass",
-                company: "MONKEY Pictures _ concept/directing/edit",
-            },
-            {
                 videoId: "380339211",
                 title: "DECATHLON ELOPS Bikes",
                 description:
@@ -128,10 +129,24 @@ export const data = [
                 company: "MONKEY Pictures _ concept/AD/edit",
             },
             {
+                videoId: "380335696",
+                title: "BELSAZAR Vermouth",
+                description:
+                    "social media and event presentation video series for Belsazar Vermouth",
+                company: "MONKEY Pictures _ concept/copy/edit",
+            },
+            {
+                videoId: "380335336",
+                title: "RED BULL NJ5",
+                description:
+                    "campaign for Red Bull Neymar Jr's Five. Girls Kick Ass",
+                company: "MONKEY Pictures _ concept/directing/edit",
+            },
+            {
                 videoId: "380336130",
                 title: "HGTV Eva Padberg",
                 description: "Promo for Home & Garden TV with Eva Padberg",
-                company: "MONKEY PICTURES _ concept/edit",
+                company: "MONKEY PICTURES _ concept/copy/edit",
             },
         ],
     },
