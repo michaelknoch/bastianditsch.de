@@ -9,18 +9,9 @@ const Footer = ({ style }) => (
                     kontakt@bastianditsch.de
                 </a>
             </span>
-            <span>|</span>
-            <span style={styles.span}>+49 176 61919116</span>
-            <span>|</span>
+            <span>-</span>
             <span style={styles.span}>
-                <a
-                    style={styles.link}
-                    target="_blank"
-                    href="/bastianditsch_about.pdf"
-                >
-                    about me
-                </a>
-            </span>
+                49 176 61919116</span>
         </div>
     </div>
 );
