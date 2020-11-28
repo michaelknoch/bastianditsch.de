@@ -3,13 +3,13 @@ import { Html, Head, Body } from "react-static";
 
 export default {
     getSiteData: () => ({
-        title: "Bastian Ditsch - Video Editor",
+        title: "Bastian Ditsch - Video Edit/Concept",
     }),
     plugins: ["react-static-plugin-sass"],
     Document: ({ Html, Head, Body, children }) => (
         <Html>
             <Head>
-                <title>Bastian Ditsch - Video Editor</title>
+                <title>Bastian Ditsch - Video Edit/Concept</title>
                 <meta charSet="UTF-8" />
                 <meta
                     name="viewport"
