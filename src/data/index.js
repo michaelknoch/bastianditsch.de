@@ -47,8 +47,14 @@ export const data = [
         img: paramount,
         headline: "TV/ONLINE PROMOTION",
         subtitle:
-            "RED BULL, HGTV, BELSAZAR, SuperRTL, Paramount, Nick, Nicknight",
+            "DECATHLON, RED BULL, HGTV, BELSAZAR, SuperRTL, Paramount, Nick, Nicknight",
         videos: [
+            {
+                videoId: "484872554",
+                title: "DECATHLON Es beginnt in deinem Kopf",
+                description: "Online Campaign for Decathlon",
+                company: "MONKEY Pictures _ idea/concept/copy",
+            },
             {
                 videoId: "387259970",
                 title: "SUPER RTL Ricky Zoom",
